@@ -7,12 +7,16 @@
   <title>Document</title>
 </head>
 <body>
-  <script type="text/javascript" src="bundle.js"></script>
+  <script type="text/javascript" src="bundle1.js"></script>
+  <script type="text/javascript" src="bundle2.js"></script>
   <pre>
 module.exports = {
-  entry: './main.js',
+  entry: {
+    bundle1: './main1.js',
+    bundle2: './main2.js'
+  },
   output: {
-    filename: 'bundle.js'
+    filename: '[name].js'
   }
 };
   </pre>
