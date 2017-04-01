@@ -7,21 +7,17 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="wrapper"></div>
   <script type="text/javascript" src="bundle.js"></script>
-  <pre>
+  <h1>Hello World</h1>
+    <pre>
 module.exports = {
-  entry: './main.jsx',
+  entry: './main.js',
   output: {
     filename: 'bundle.js'
   },
   module: {
     loaders:[
-      {
-        test: /\.js[x]?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader?presets[]=es2015&presets[]=react',
-      },
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
     ]
   }
 };
