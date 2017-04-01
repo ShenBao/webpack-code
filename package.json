@@ -13,7 +13,7 @@
   "keywords": [
     "shenbao"
   ],
-  "author": "shenbao shenbaoone@gmail.com",
+  "author": "shenbao <shenbaoone@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ShenBao/webpack-example/issues"
