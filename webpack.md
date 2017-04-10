@@ -393,7 +393,63 @@ plugin 也是一个 npm 模块，安装一个 plugin ：
 $ npm install bell-on-bundler-error-plugin --save-dev 
 ```
 
+## webpack 分割 vendor 代码和应用业务代码
 
+在上面的 jsx 配置中，我们将 React 和 ReactDOM 一起打包进了项目代码。为了实现业务代码和第三方代码的分离，我们可以利用 
+CommonsChunkPlugin 插件.
+
+修改 webpack.config.js
+
+```javascript
+{
+    entry: {
+        index: './src/index.js',
+        a: './src/a.js',
+        // 第三方包
+        vendor: [
+          'react',
+          'react-dom'
+        ]
+    },
+    output: {
+        path: './dist/',
+        filename: '[name].js'
+    },
+    module: {
+        loaders: [{
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel',
+            query: {
+                presets: ['es2015', 'stage-0', 'react']
+            }
+        }, {
+            test: /\.css$/, 
+            loader: "style-loader!css-loader" 
+        }]
+    },
+    plugins: [
+      new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
+    ]
+}
+```
+
+执行 webpack 命令，输出日志：
+
+```shell
+Hash: f1256dc00b9d4bde8f7f
+Version: webpack 1.13.1
+Time: 1459ms
+           Asset       Size  Chunks             Chunk Names
+            a.js  109 bytes       0  [emitted]  a
+        index.js    10.9 kB       1  [emitted]  index
+vendor.bundle.js     702 kB       2  [emitted]  vendor
+   [0] multi vendor 40 bytes {2} [built]
+   [0] multi index 40 bytes {1} [built]
+    + 173 hidden modules
+```
+
+index.js 体积变小了，多出了 vendor.bundle.js 
 
 
 
