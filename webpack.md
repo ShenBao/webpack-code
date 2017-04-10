@@ -358,6 +358,40 @@ var css = require("css!./style.css");
 编译结果相同。
 
 
+## webpack 开发环境与生产环境
+
+前端开发环境通常分为两种，开发环境和生成环境，在开发环境中，可能我们需要日志输出，sourcemap ，错误报告等功能，在生成环境中，需要做代码压缩，hash 值生成。两种环境在其他的一些配置上也可能不同。 
+
+所以为了区分，我们可以创建两个文件：
+
+- webpack.config.js      // 开发环境
+- webpack.config.prod.js // 生产环境
+
+生产环境 build 用如下命令：
+
+```shell
+webpack --config webpack.config.prod.js
+```
+
+在本章深入 webpack 小节中会更多的介绍生产环境中的优化
+
+## webpack 插件
+
+webpack 提供插件机制，可以对每次 build 的结果进行处理。配置 plugin 的方法为在 webpack.config.js 中添加：
+
+```javascript
+{
+  plugins: [
+   new BellOnBundlerErrorPlugin()
+  ]
+}
+```
+
+plugin 也是一个 npm 模块，安装一个 plugin ：
+
+```shell
+$ npm install bell-on-bundler-error-plugin --save-dev 
+```
 
 
 
