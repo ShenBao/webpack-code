@@ -189,7 +189,174 @@ ReactDOM.render(
 $ webpack
 ```
 
-## webpack loaders
+##  webpack loaders
+
+在配置 JSX 的过程中，使用到了 loader， 前面已经介绍过 webpack 的核心功能包含 loader，通过 loader 可以将任意资源转化为 javascript 模块。
+
+### loader 定义
+
+> Loaders are transformations that are applied on a resource file of your app.
+> (Loaders 是应用中源码文件的编译转换器)
+
+
+
+也就是说在 webpack 中，通过 loader 可以实现 JSX 、Es6、CoffeeScript 等的转换，
+
+### loader 功能
+
+1. loader 管道：在同一种类型的源文件上，可以同时执行多个 loader ， loader 的执行方式可以类似管道的方式，管道执行的方向为从右到左。
+2. loader 可以支持同步和异步
+3. loader 可以接收配置参数
+4. loader 可以通过正则表达式或者文件后缀指定特定类型的源文件
+5. 插件可以提供给 loader 更多功能
+6. loader 除了做文件转换以外，还可以创建额外的文件
+
+### loader 配置
+
+新增 loader 可以在 webpack.config.js 的 `module.loaders` 数组中新增一个 loader 配置。
+
+一个 loader 的配置为：
+
+```javascript
+{
+    // 通过扩展名称和正则表达式来匹配资源文件
+    test: String ,          
+    // 匹配到的资源会应用 loader， loader 可以为 string 也可以为数组
+    loader: String | Array
+}
+```
+
+感叹号和数组可以定义 loader 管道:
+
+```javascript
+{
+    module: {
+        loaders: [
+            { test: /\.jade$/, loader: "jade" },
+            // => .jade 文件应用  "jade" loader  
+
+            { test: /\.css$/, loader: "style!css" },
+            { test: /\.css$/, loaders: ["style", "css"] },
+            // => .css 文件应用  "style" 和 "css" loader  
+        ]
+    }
+}
+```
+
+loader 可以配置参数
+
+```javascript
+{
+    module: {
+        loaders: [
+            // => url-loader 配置  mimetype=image/png 参数
+            { 
+                test: /\.png$/, 
+                loader: "url-loader?mimetype=image/png" 
+            }, {
+                test: /\.png$/,
+                loader: "url-loader",
+                query: { mimetype: "image/png" }
+            }
+
+        ]
+    }
+}
+```
+
+### 使用 loader
+
+#### 第一步: 安装
+
+loader 和 webpack 一样都是 Node.js 实现，发布到 npm 当中，需要使用 loader 的时候，只需要 
+
+```shell
+$ npm install xx-loader --save-dev
+
+// eg css loader
+$ npm install css-loader style-loader --save-dev
+```
+
+#### 第二步：修改配置
+
+```javascript
+{
+    entry: {
+        index: './src/index.js',
+        a: './src/a.js'
+    },
+    output: {
+        path: './dist/',
+        filename: '[name].js'
+    },
+    module: {
+        loaders: [{
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel',
+            query: {
+                presets: ['es2015', 'stage-0', 'react']
+            }
+        }, {
+            test: /\.css$/, 
+            loader: "style-loader!css-loader" 
+        }]
+    }
+}
+```
+
+#### 第三步：使用
+
+前面我们已经使用过 jsx loader 了， loader 的使用方式有多种
+
+1. 在配置文件中配置
+2. 显示的通过 require 调用
+3. 命令行调用
+
+> 显示的调用 require 会增加模块的耦合度，应尽量避免这种方式
+
+以 css-loader 为例子，在项目 src 下面创建一个 css
+
+src/style.css
+
+```css
+body {
+    background: red;
+    color: white;
+}
+```
+
+修改 webpack 配置 entry 添加 
+
+```javascript
+entry: {
+    index: ['./src/index.js', './src/style.css']
+}
+```
+
+执行 webpack 命令然后打开 index.html 会看到页面背景被改为红色。
+
+最终的编译结果为：
+
+```javascript
+....
+function(module, exports, __webpack_require__) {
+    exports = module.exports = __webpack_require__(171)();
+    exports.push([module.id, "\nbody {\n background: red;\n color: white;\n}\n", ""]);
+}
+....
+```
+
+可以看到 css 被转化为了 javascript, 在页面中并非调用 `<link rel="stylesheet" href="">` 的方式， 而是使用 inline 的 `<style>.....</style>` 
+
+另外一种方法是直接 require， 修改 src/index.js:
+
+```javascript
+var css = require("css!./style.css");
+```
+
+编译结果相同。
+
 
 
 
