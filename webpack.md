@@ -451,7 +451,169 @@ vendor.bundle.js     702 kB       2  [emitted]  vendor
 
 index.js 体积变小了，多出了 vendor.bundle.js 
 
+## webpack develop server
 
+在前端开发的过程中，通常需要启动一个服务器，把开发打包好的前端代码放在服务器上，通过访问服务器访问并测试（因为可以有些情况需要 ajax 请求）。 webpack 提供了一个机遇 **node.js Express** 的服务器 - **webpack-dev-server** 来帮助我们简化服务器的搭建，并提供服务器资源访问的一些简单配置。
+
+
+### 安装 webpack-dev-server
+
+```shell
+$ npm install  webpack-dev-server -g
+```
+
+
+### 启动 webpack-dev-server
+
+```shell
+$ webpack-dev-server --content-base ./
+```
+
+`--content-base ./` 参数表示将当前目录作为 server 根目录。 命令启动过后，会在 8080 端口启动一个 http 服务，通过访问 `http://localhost:8080/index.html` 可以访问 index.html 内容。 
+
+如果访问提示报错：
+
+```javascript
+Uncaught ReferenceError: webpackJsonp is not defined
+```
+
+原因是 html 中没有引用 `vendor.bundle.js`, 修改 html ：
+
+```html
+<!-- vendor 必须先于 index.js -->
+<script src="dist/vendor.bundle.js"></script>
+<script src="dist/index.js"></script>
+```
+
+修改 index.html 过后可以看到正确结果
+
+### 代码监控
+
+webpack-dev-server 除了提供 server 服务以外， 还会监控源文件的修改，如果源文件改变了，会调用 webpack 重新打包
+
+修改 style.css 中的内容为：
+
+```css
+body {
+ background: whitesmoke;
+ color: #333;
+ font-size: 100px;
+}
+```
+
+可以看到输出以下日志：
+
+```shell
+  [168] ./~/react/lib/renderSubtreeIntoContainer.js 466 bytes {2} [built]
+webpack: bundle is now VALID.
+webpack: bundle is now INVALID.
+Hash: cc7d7720b1a0fcbef972
+Version: webpack 1.13.0
+Time: 76ms
+chunk    {0} a.js (a) 32 bytes {2}
+     + 1 hidden modules
+chunk    {1} index.js (index) 10.3 kB {2}
+  [170] ./~/css-loader!./src/style.css 230 bytes {1} [built]
+     + 5 hidden modules
+chunk    {2} vendor.bundle.js (vendor) 665 kB
+     + 168 hidden modules
+webpack: bundle is now VALID.
+```
+
+这个时候说明代码已经修改了，但是这个时候刷新浏览器过后，背景是没有改变的，原因是 webpack-dev-server 的打包结果是放在内存的，查看 dist/index.js 的内容实际上是没有改变的，那如何访问内存中的打包内容呢？
+
+修改 webpack.config.js 的 output.publicPath:
+
+```javascript
+  output: {
+      path: './dist/',
+      filename: '[name].js',
+      publicPath: '/dist' 
+      // webpack-dev-server 启动目录是  `/`, `/dist` 目录是打包的目标目录相对于启动目录的路径
+  },
+```
+
+重新启动
+
+```
+$ ctrl + c 结束进程
+$ webpack-dev-server
+```
+
+修改 style.css 再刷新页面，修改的内容会反映出来。
+
+### 自动刷新
+
+上面的配置已经能做到自动监控代码，每次修改完代码，刷新浏览器就可以看到最新结果，但是 webpack-dev-server 还提供了自动刷新功能，有两种模式。
+
+**Iframe 模式**
+
+修改访问的路径： `http://localhost:8080/index.html` -> `http://localhost:8080/webpack-dev-server/index.html` 。这个时候每次修改代码，打包完成过后都会自动刷新页面。
+
+- 不需要额外配置，只用修改路径
+- 应用被嵌入了一个 iframe 内部，页面顶部可以展示打包进度信息
+- 因为 iframe 的关系，如果应用有多个页面，无法看到当前应用的 url 信息
+
+**inline 模式**
+
+启动 webpack-dev-server 的时候添加 `--inline` 参数
+
+- 需要添加 `--inline` 配置参数
+- 没有顶部信息提示条，提示信息在控制台中展现
+ 
+### 热加载 （hot module replacement)
+
+webpack-dev-server 还提供了模块热加载的方式，在不刷新浏览器的条件下，应用最新的代码更新，启动 webpack-dev-server 的时候添加 `--inline --hot` 参数就可以体验。
+
+```shell
+$ webpack-dev-server --inline --hot
+```
+
+修改代码在浏览器控制台中会看到这样的日志输出：
+
+```log
+[HMR] Waiting for update signal from WDS...
+vendor.bundle.js:670 [WDS] Hot Module Replacement enabled.
+2vendor.bundle.js:673 [WDS] App updated. Recompiling...
+vendor.bundle.js:738 [WDS] App hot update...
+vendor.bundle.js:8152 [HMR] Checking for updates on the server...
+vendor.bundle.js:8186 [HMR] Updated modules:
+vendor.bundle.js:8188 [HMR]  - 245
+vendor.bundle.js:8138 [HMR] App is up to date.
+```
+
+
+### 在 webpack.config.js 中配置 webpack develop server
+
+修改 webpack.config.js 添加：
+
+```javascript
+plugins: [
+  new webpack.optimize.CommonsChunkPlugin(
+    /* chunkName= */"vendor", 
+    /* filename= */"vendor.bundle.js", Infinity),
+  // 需要手动添加 HotModuleReplacementPlugin , 命令行的方式会自动添加
+  new webpack.HotModuleReplacementPlugin()
+],
+devServer: {
+  hot: true,
+  inline: true
+}
+```
+
+不加参数直接执行 webpack-dev-server
+
+```shell
+$ webpack-dev-server
+```
+
+webpack-dev-server 还提供了其他的一些功能， 如：
+
+1. 配置 proxy
+2. 访问 node.js API 
+3. 和现有的 node 服务集成
+
+基于这些功能可以实现很多自定义的功能。
 
 
 
