@@ -14,6 +14,8 @@
 
 [webpack2中文](https://doc.webpack-china.org/concepts/)
 
+[webpack2中文2](http://www.css88.com/doc/webpack2/)
+
 
 
 
