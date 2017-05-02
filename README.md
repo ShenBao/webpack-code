@@ -311,7 +311,7 @@ require(['./test'],function(content){
 ```
 - es6
 
-### Hot Module Replacement OpenBrowserPlugin [source case11](./webpack-1.x/case11)
+### Hot Module Replacement OpenBrowserPlugin [source case12](./webpack-1.x/case12)
 
 [热更新文档](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
 
@@ -348,22 +348,28 @@ module.exports = {
 - module.preLoaders 和 module.postLoaders 将被移除
 - resolve.root, resolve.fallback, resolve.modulesDirectories（resolve.extensions 该配置项将不再要求强制转入一个空字符串）
 - UglifyJsPlugin中的 sourceMap配置项将默认关闭，UglifyJsPlugin 的警告配置将默认关闭
+- Loader的配置项将通过options来设置
+- webpack2直接处理import和export
+- 代码分割
+- Dynamic expressions 动态表达式
+- 可以混用 ES2015 和 AMD 和 CommonJS
+- Template strings 模板字符串
+- 配置支持项支持Promise
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#### 迁移至2.x案例
+- get-started [source case01](./webpack-1.x/case01)
+- babel的使用 [source case02](./webpack-1.x/case02)
+- json的使用 [source case03](./webpack-1.x/case03)
+- css的使用 [source case04](./webpack-1.x/case04)
+- less的使用 [source case05](./webpack-1.x/case05)
+- image的使用 [source case06](./webpack-1.x/case06)
+- css module [source case07](./webpack-1.x/case07)
+- 压缩UglifyJs [source case08](./webpack-1.x/case08)
+- CommonsChunkPlugin [source case09](./webpack-1.x/case09)
+- 第三方 OpenBrowserPlugin [source case10](./webpack-1.x/case10)
+- code splitting OpenBrowserPlugin [source case11](./webpack-1.x/case11)
+- Hot Module Replacement OpenBrowserPlugin [source case12](./webpack-1.x/case12)
 
 
 
