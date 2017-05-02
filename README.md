@@ -225,6 +225,18 @@ loader列表：https://webpack.github.io/docs/list-of-plugins.html
 - CommonsChunkPlugin
 - 第三方 OpenBrowserPlugin
 
+#### 压缩UglifyJs
+```webpack
+
+```
+#### CommonsChunkPlugin
+```webpack
+
+```
+#### 第三方 OpenBrowserPlugin
+```webpack
+
+```
 
 ### Code splitting
 
