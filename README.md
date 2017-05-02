@@ -34,9 +34,33 @@
 
 ### webpack.config.js
 
+```webpack
+module.exports = {
+	entry:{
+		'bundle':'./main.js',
+		'bundle1':'./main1.js'
+	},
+	output:{
+		path:__dirname +'/dist',
+		filename:'[name].js'
+	},
+	module:{
+		loaders:[{
+			test://,
+			loader:''
+		}]
+	},
+    plugins: [
+
+    ]
+}
+```
 
 ### get-started
 
+命令行输入webpack-dev-server
+
+若webpack.config.js配置文件名为config.js,那么执行webpack -dev-server -c config.js即可
 
 ### loader
 
