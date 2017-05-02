@@ -58,7 +58,7 @@ module.exports = {
 
 ### get-started
 
-[case1](./webpack-1.x/case01)
+[source case01](./webpack-1.x/case01)
 
 ```webpack
 module.exports = {
