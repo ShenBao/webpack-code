@@ -221,11 +221,11 @@ loader介绍：https://webpack.github.io/docs/using-plugins.html
 
 loader列表：https://webpack.github.io/docs/list-of-plugins.html
 
-- 压缩UglifyJs [source case08](./webpack-1.x/case08)
-- CommonsChunkPlugin [source case09](./webpack-1.x/case09)
+- 压缩UglifyJs [source case08](./webpack-1.x/case08)
+- CommonsChunkPlugin [source case09](./webpack-1.x/case09)
 - 第三方 OpenBrowserPlugin [source case10](./webpack-1.x/case10)
 
-#### 压缩UglifyJs [source case08](./webpack-1.x/case08)
+#### 压缩UglifyJs [source case08](./webpack-1.x/case08)
 ```webpack
 var webpack = require('webpack');
 var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
@@ -244,7 +244,7 @@ module.exports = {
 	]
 }
 ```
-#### CommonsChunkPlugin [source case09](./webpack-1.x/case09)
+#### CommonsChunkPlugin [source case09](./webpack-1.x/case09)
 ```webpack
 var webpack = require('webpack');
 
@@ -295,14 +295,14 @@ test.js
 module.exports = 'hello world!
 ```
 main.js
-- commonJs
+- commonJs
 ```
 require.ensure(['./test'],function(){
 	var content = require('./test');
 	document.querySelector('#doc').innerHTML = content;
 })
 ```
-- amd
+- amd
 ```
 require(['./test'],function(content){
 	//var content = require('./test');
