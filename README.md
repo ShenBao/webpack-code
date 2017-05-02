@@ -334,7 +334,6 @@ module.exports = {
   ]
 };
 ```
-
 相当于 webpack-dev-server --hot --inline
 
 
