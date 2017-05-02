@@ -24,8 +24,17 @@ mocha
 - webpack配置vender，loader，提供全局变量
 
 
+### 按需加载
+- 为什么需要？
+- webpack配置
 
 
+### 性能优化
+- js压缩
+- html压缩
+- 文件加后缀
+- 提取公共部分
+- webpack的配置
 
 
 
