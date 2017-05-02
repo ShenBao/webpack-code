@@ -280,6 +280,9 @@ module.exports = {
 
 ### Code splitting
 
+[代码分割介绍](https://webpack.github.io/docs/code-splitting.html)
+
+
 
 ### Hot Module Replacement
 
