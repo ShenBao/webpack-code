@@ -278,7 +278,7 @@ module.exports = {
 };
 ```
 
-### Code splitting
+### Code splitting OpenBrowserPlugin [source case11](./webpack-1.x/case11)
 
 [代码分割介绍](https://webpack.github.io/docs/code-splitting.html)
 
@@ -311,7 +311,7 @@ require(['./test'],function(content){
 ```
 - es6
 
-### Hot Module Replacement
+### Hot Module Replacement OpenBrowserPlugin [source case11](./webpack-1.x/case11)
 
 [热更新文档](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
 
@@ -336,31 +336,5 @@ module.exports = {
 ```
 
 相当于 webpack-dev-server --hot --inline
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
