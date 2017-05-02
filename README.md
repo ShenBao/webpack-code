@@ -217,7 +217,9 @@ module.exports = {
 
 ### plugin
 
+loader介绍：https://webpack.github.io/docs/using-plugins.html
 
+loader列表：https://webpack.github.io/docs/list-of-plugins.html
 
 - 压缩UglifyJs
 - CommonsChunkPlugin
