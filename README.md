@@ -57,7 +57,18 @@ module.exports = {
 ```
 
 ### get-started
-
+```webpack
+module.exports = {
+	entry:{
+		'bundle':'./main.js',
+		'bundle1':'./main1.js'
+	},
+	output:{
+		path:__dirname +'/dist',
+		filename:'[name].js'
+	}
+}
+```
 命令行输入webpack-dev-server
 
 若webpack.config.js配置文件名为config.js,那么执行webpack -dev-server -c config.js即可
