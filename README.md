@@ -29,7 +29,6 @@
 - webpack -d  – to include source maps 生产 map进行调试
 - webpack --colors – for making things pretty 错误提示颜色友好处理
 
-
 ## webpack @1.X
 
 ### webpack.config.js
