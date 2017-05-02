@@ -26,8 +26,8 @@
 - webpack  – for building once for development 开发环境
 - webpack -p – for building once for production (minification) 生产环境
 - webpack --watch – for continuous incremental build 监听编译
-- webpack -d  – to include source maps
-- webpack --colors – for making things pretty
+- webpack -d  – to include source maps 生产 map进行调试
+- webpack --colors – for making things pretty 错误提示颜色友好处理
 
 
 
