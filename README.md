@@ -75,6 +75,13 @@ module.exports = {
 
 ### loader
 
+loader介绍：https://webpack.github.io/docs/using-loaders.html
+
+loader列表：https://webpack.github.io/docs/list-of-loaders.html
+
+
+
+
 
 ### plugin
 
