@@ -221,21 +221,61 @@ loader介绍：https://webpack.github.io/docs/using-plugins.html
 
 loader列表：https://webpack.github.io/docs/list-of-plugins.html
 
-- 压缩UglifyJs
-- CommonsChunkPlugin
-- 第三方 OpenBrowserPlugin
+- 压缩UglifyJs [source case08](./webpack-1.x/case08)
+- CommonsChunkPlugin [source case09](./webpack-1.x/case09)
+- 第三方 OpenBrowserPlugin [source case10](./webpack-1.x/case10)
 
-#### 压缩UglifyJs
+#### 压缩UglifyJs [source case08](./webpack-1.x/case08)
 ```webpack
+var webpack = require('webpack');
+var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 
+module.exports = {
+	entry:'./main.js',
+	output:{
+		filename:'bundle.js'
+	},
+	plugins:[
+		new uglifyJsPlugin({
+			compress:{
+				warnings:false
+			}
+		})
+	]
+}
 ```
-#### CommonsChunkPlugin
+#### CommonsChunkPlugin [source case09](./webpack-1.x/case09)
 ```webpack
+var webpack = require('webpack');
 
+module.exports = {
+	entry:{
+		app:'./main.js',
+		vendor:['jquery']
+	},
+	output:{
+		filename:'bundle.js'
+	},
+	plugins:[
+		new webpack.optimize.CommonsChunkPlugin('vendor','vendor.js')
+	]
+}
 ```
-#### 第三方 OpenBrowserPlugin
+#### 第三方 OpenBrowserPlugin [source case10](./webpack-1.x/case10)
 ```webpack
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
+module.exports = {
+  entry: './main.js',
+  output: {
+    filename: 'bundle.js'
+  },
+  plugins: [
+    new OpenBrowserPlugin({
+      url: 'http://localhost:8080'
+    })
+  ]
+};
 ```
 
 ### Code splitting
