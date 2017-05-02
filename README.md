@@ -313,10 +313,29 @@ require(['./test'],function(content){
 
 ### Hot Module Replacement
 
+[热更新文档](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
 
+```webpack
+var webpack = require('webpack');
+var path = require('path');
 
+module.exports = {
+  entry: [
+    'webpack/hot/dev-server',
+    'webpack-dev-server/client?http://localhost:8080',
+    './main.js'
+  ],
+  output: {
+    filename: 'bundle.js',
+    publicPath: '/static/'
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
+};
+```
 
-
+相当于 webpack-dev-server --hot --inline
 
 
 
