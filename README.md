@@ -30,7 +30,7 @@
 - webpack --colors – for making things pretty 错误提示颜色友好处理
 
 
-## webpack@1.x
+## webpack @1.X
 
 ### webpack.config.js
 
@@ -336,5 +336,34 @@ module.exports = {
 ```
 
 相当于 webpack-dev-server --hot --inline
+
+
+## webpack @2.X
+
+### API变化
+- module.loaders 将变为 module.rules
+- 链式loaders
+- module名称后，自动自动补全 -loader的功能将被移除
+- json-loader 无需要独立安装
+- module.preLoaders 和 module.postLoaders 将被移除
+- resolve.root, resolve.fallback, resolve.modulesDirectories（resolve.extensions 该配置项将不再要求强制转入一个空字符串）
+- UglifyJsPlugin中的 sourceMap配置项将默认关闭，UglifyJsPlugin 的警告配置将默认关闭
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

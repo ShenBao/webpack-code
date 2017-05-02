@@ -7,11 +7,11 @@ var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin
 module.exports = {
 	entry:{
 		app: './src/main.js',
-		vender:['jquery','director','handlebars']
+		vender:['jquery','director','handlebars']//提取公共部分
 	},
 	output:{
 		path:__dirname+'/dist',
-		filename:'[name].[hash:8].js'
+		filename:'[name].[hash:8].js'//添加hash
 	},
 	module:{
 		loaders:[
@@ -36,11 +36,11 @@ module.exports = {
 	plugins:[
 		new uglifyJsPlugin({
 			compress:{
-				warnings:false
+				warnings:false//压缩js
 			}
 		}),
 		new HtmlWebpackPlugin({
-			minify:{collapseWhitespace:true},
+			minify:{collapseWhitespace:true},//压缩html
 			template:'./src/index.html'
 		}),
 		new webpack.ProvidePlugin({
