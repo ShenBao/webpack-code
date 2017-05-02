@@ -282,10 +282,34 @@ module.exports = {
 
 [代码分割介绍](https://webpack.github.io/docs/code-splitting.html)
 
+```webpack
+module.exports = {
+	entry:'./main.js',
+	output:{
+		filename:'bundle.js'
+	}
+}
+```
+test.js
+```
+module.exports = 'hello world!
+```
+main.js
 - commonJs
+```
+require.ensure(['./test'],function(){
+	var content = require('./test');
+	document.querySelector('#doc').innerHTML = content;
+})
+```
 - amd
+```
+require(['./test'],function(content){
+	//var content = require('./test');
+	document.querySelector('#doc').innerHTML = content;
+})
+```
 - es6
-
 
 ### Hot Module Replacement
 
