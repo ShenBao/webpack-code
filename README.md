@@ -218,6 +218,12 @@ module.exports = {
 ### plugin
 
 
+
+- 压缩UglifyJs
+- CommonsChunkPlugin
+- 第三方 OpenBrowserPlugin
+
+
 ### Code splitting
 
 
