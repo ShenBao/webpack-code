@@ -139,11 +139,33 @@ module.exports = {
 ```
 #### css的使用 [source case04](./webpack-1.x/case04)
 ```webpack
-
+module.exports ={
+	entry:'./main.js',
+	output:{
+		filename:'bundle.js'
+	},
+	module:{
+		loaders:[{
+			test:/\.css$/,
+			loaders:["style","css"]
+		}]
+	}
+}
 ```
-#### less的使用
+#### less的使用 [source case05](./webpack-1.x/case05)
 ```webpack
-
+module.exports ={
+	entry:'./main.js',
+	output:{
+		filename:'bundle.js'
+	},
+	module:{
+		loaders:[{
+			test:/\.less$/,
+			loader:'style!css!less'
+		}]
+	}
+}
 ```
 #### image的使用
 ```webpack
