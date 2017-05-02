@@ -9,13 +9,13 @@
 - 单元测试
 
 ### 技术栈
-webpack
-director
-handlebars
-babel
-jquery
-less
-mocha
+- webpack
+- director
+- handlebars
+- babel
+- jquery
+- less
+- mocha
 
 ### 模块化开发
 - director配置路由
@@ -36,6 +36,9 @@ mocha
 - 提取公共部分
 - webpack的配置
 
+### 单元测试
+- 为什么需要单元测试
+- mocha单元测试
 
 
 
