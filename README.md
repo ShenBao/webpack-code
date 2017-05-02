@@ -214,7 +214,6 @@ module.exports = {
 }
 ```
 
-
 ### plugin
 
 loader介绍：https://webpack.github.io/docs/using-plugins.html
@@ -281,7 +280,6 @@ module.exports = {
 ### Code splitting OpenBrowserPlugin [source case11](./webpack-1.x/case11)
 
 [代码分割介绍](https://webpack.github.io/docs/code-splitting.html)
-
 ```webpack
 module.exports = {
 	entry:'./main.js',
@@ -314,7 +312,6 @@ require(['./test'],function(content){
 ### Hot Module Replacement OpenBrowserPlugin [source case12](./webpack-1.x/case12)
 
 [热更新文档](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
-
 ```webpack
 var webpack = require('webpack');
 var path = require('path');
