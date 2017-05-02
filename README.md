@@ -111,7 +111,7 @@ module.exports = {
 	}
 }
 ```
-#### json的使用
+#### json的使用 [source case03](./webpack-1.x/case03)
 ```webpack
 module.exports = {
 	devtool: 'eval-source-map',
@@ -137,7 +137,7 @@ module.exports = {
 	}
 }
 ```
-#### css的使用
+#### css的使用 [source case04](./webpack-1.x/case04)
 ```webpack
 
 ```
