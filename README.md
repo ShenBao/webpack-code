@@ -22,6 +22,12 @@
 - npm install -g webpack@1.12.x
 - npm install webpack-dev-server --save-dev
 
+### 参数介绍
+- webpack  – for building once for development
+- webpack -p – for building once for production (minification)
+- webpack --watch – for continuous incremental build
+- webpack -d  – to include source maps
+- webpack --colors – for making things pretty
 
 
 
