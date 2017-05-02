@@ -79,6 +79,12 @@ loader介绍：https://webpack.github.io/docs/using-loaders.html
 
 loader列表：https://webpack.github.io/docs/list-of-loaders.html
 
+- babel的使用
+- json的使用
+- css的使用
+- less的使用
+- image的使用
+- css module
 
 
 
