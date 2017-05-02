@@ -16,6 +16,35 @@
 - 智能解析
 - 插件系统
 
+### 安装
+- 前置依赖nodejs,建议选择最新的版本
+- webpack有1.x和2.x版本区别，使用有一些区别
+- npm install -g webpack@1.12.x
+- npm install webpack-dev-server --save-dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
