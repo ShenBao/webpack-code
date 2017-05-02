@@ -92,6 +92,7 @@ loader列表：https://webpack.github.io/docs/list-of-loaders.html
 #### babel的使用 [source case02](./webpack-1.x/case02)
 ```webpack
 module.exports = {
+    
 	entry:'./main.js',
 	output:{
 		filename:'./bundle.js'
