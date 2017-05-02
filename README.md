@@ -173,13 +173,45 @@ module.exports ={
 	}
 }
 ```
-#### image的使用
+#### image的使用 [source case06](./webpack-1.x/case07)
 ```webpack
-
+module.exports = {
+	entry:'./main.js',
+	output:{
+		filename:'bundle.js'
+	},
+	module:{
+		loaders:[
+		{
+			test:/\.(jpg|png)/,
+			loader:'url-loader?limit=8192'
+		}]
+	}
+}
 ```
-#### css module
+#### css module [source case07](./webpack-1.x/case07)
 ```webpack
-
+module.exports = {
+	entry:'./main.js',
+	output:{
+		filename:'bundle.js'
+	},
+	module:{
+		loaders:[
+		{
+			test:/\.js$/,
+			exclude:/node_modules/,
+			loader:'babel',
+			query:{
+				presets:['es2015','stage-0']
+			}
+		},
+		{
+			test:/\.css$/,
+			loader:'style!css?modules'
+		}]
+	}
+}
 ```
 
 
