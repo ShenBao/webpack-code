@@ -152,6 +152,12 @@ module.exports ={
 	}
 }
 ```
+
+loaders的写法总结:
+- loader:'xxx!yyy'
+- loader:'xxx-loader!yyy-loader'
+- loaders:['xxx','yyy']
+
 #### less的使用 [source case05](./webpack-1.x/case05)
 ```webpack
 module.exports ={
