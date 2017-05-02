@@ -83,16 +83,16 @@ loader介绍：https://webpack.github.io/docs/using-loaders.html
 loader列表：https://webpack.github.io/docs/list-of-loaders.html
 
 - babel的使用 [source case02](./webpack-1.x/case02)
-- json的使用 
-- css的使用
-- less的使用
-- image的使用
-- css module
+- json的使用 [source case03](./webpack-1.x/case03)
+- css的使用 [source case04](./webpack-1.x/case04)
+- less的使用 [source case05](./webpack-1.x/case05)
+- image的使用 [source case06](./webpack-1.x/case06)
+- css module [source case07](./webpack-1.x/case07)
 
 #### babel的使用 [source case02](./webpack-1.x/case02)
 ```webpack
 module.exports = {
-    
+
 	entry:'./main.js',
 	output:{
 		filename:'./bundle.js'
@@ -112,11 +112,47 @@ module.exports = {
 }
 ```
 #### json的使用
+```webpack
+module.exports = {
+	devtool: 'eval-source-map',
+	entry:'./main.js',
+	output:{
+		filename:'./bundle.js'
+	},
+	module:{
+		loaders:[
+			{
+				test:/\.json$/,
+				loaders:['json']
+			},
+			{
+				test:/\.js$/,
+				exclude:/node_modules/,
+				loader:'babel',
+				query:{
+					presets: ['es2015']
+				}
+			}
+		]
+	}
+}
+```
 #### css的使用
-#### less的使用
-#### image的使用
-#### css module
+```webpack
 
+```
+#### less的使用
+```webpack
+
+```
+#### image的使用
+```webpack
+
+```
+#### css module
+```webpack
+
+```
 
 
 ### plugin
