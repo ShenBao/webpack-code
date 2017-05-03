@@ -409,6 +409,7 @@ module.exports = {
 执行
 eslint app/ webpack.*.js --cache
 
+配置成在浏览器中显示
 devServer: {
 	host: process.env.HOST, // Defaults to `localhost`
 	port: 80, // Defaults to 8080
