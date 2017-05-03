@@ -379,6 +379,11 @@ devServer: {
 	},
 },
 ```
+自动刷新
+```
+webpack-dev-server --env development
+```
+
 
 ## 其他插件
 
