@@ -366,5 +366,3 @@ module.exports = {
 - code splitting OpenBrowserPlugin [source case11](./webpack-1.x/case11)
 - Hot Module Replacement OpenBrowserPlugin [source case12](./webpack-1.x/case12)
 
-
- 
