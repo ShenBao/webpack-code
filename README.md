@@ -368,7 +368,7 @@ module.exports = {
 
 ## 其他配置
 
-server
+WDS(webpack dev server)
 ```
 devServer: {
 	host: process.env.HOST, // Defaults to `localhost`
