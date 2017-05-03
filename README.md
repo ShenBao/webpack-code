@@ -409,6 +409,9 @@ module.exports = {
     'no-console': 0,
   },
 };
+
+执行
+eslint app/ webpack.*.js --cache
 ```
 
 ## 其他插件
