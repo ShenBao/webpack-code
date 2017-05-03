@@ -383,7 +383,7 @@ devServer: {
 ```
 webpack-dev-server --env development
 ```
-eslint
+eslint http://eslint.org/docs/rules/
 ```
 
 ```
