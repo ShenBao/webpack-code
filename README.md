@@ -367,4 +367,4 @@ module.exports = {
 - Hot Module Replacement OpenBrowserPlugin [source case12](./webpack-1.x/case12)
 
 
-
+ 
