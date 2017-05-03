@@ -366,8 +366,15 @@ module.exports = {
 - code splitting OpenBrowserPlugin [source case11](./webpack-1.x/case11)
 - Hot Module Replacement OpenBrowserPlugin [source case12](./webpack-1.x/case12)
 
+## 其他配置
 
-
+server
+```
+devServer: {
+	host: process.env.HOST, // Defaults to `localhost`
+	port: 80, // Defaults to 8080
+},
+```
 
 ## 其他插件
 
