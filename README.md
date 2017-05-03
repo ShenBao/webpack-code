@@ -371,7 +371,7 @@ module.exports = {
 
 ## 其他插件
 
-
+- html-webpack-plugin
 
 
 
