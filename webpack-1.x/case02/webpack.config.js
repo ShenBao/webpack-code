@@ -16,3 +16,14 @@ module.exports = {
 		]
 	}
 }
+
+
+
+// module: {
+//     loaders: [{
+//       test: /\.js$/,
+//       exclude: /node_modules/,
+//       include: __dirname,
+//       loader: 'babel'
+//     }]
+//   }
