@@ -5,13 +5,14 @@ var path = require("path");
 var glob = require('glob')
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var entryJsPath = './src/entryjs/';
+var htmlPath = './src/html/';
+var faviconPath = './src/favicon/';
 
 //entries函数
 var entries= function () {
-    var jsDir = './src';
-    var entryFiles = glob.sync(jsDir + '/*.js')
+    var entryFiles = glob.sync(entryJsPath + '*.js')
     var map = {};
-    // console.log(entryFiles)
     for (var i = 0; i < entryFiles.length; i++) {
         var filePath = entryFiles[i];
         var filename = filePath.substring(filePath.lastIndexOf('\/') + 1, filePath.lastIndexOf('.'));
@@ -19,12 +20,10 @@ var entries= function () {
     }
     return map;
 }
-// console.log(entries());
 
 //html_webpack_plugins 定义
 var html_plugins = function () {
-    var entryHtml = glob.sync('./src' + '/*.html');
-    console.log(entryHtml)
+    var entryHtml = glob.sync(htmlPath + '*.html');
     var r = []
     var entriesFiles = entries();
     for (var i = 0; i < entryHtml.length; i++) {
@@ -32,7 +31,8 @@ var html_plugins = function () {
         var filename = filePath.substring(filePath.lastIndexOf('\/') + 1, filePath.lastIndexOf('.'));
         var conf = {
             template: filePath,
-            filename: filename + '.html'
+            filename: filename + '.html',
+            favicon: faviconPath + filename + '.ico',
         }
         //如果和入口js文件同名
         if (filename in entriesFiles) {
@@ -41,19 +41,17 @@ var html_plugins = function () {
         }
         //跨页面引用，如pageA,pageB 共同引用了common-a-b.js，那么可以在这单独处理
         //if(pageA|pageB.test(filename)) conf.chunks.splice(1,0,'common-a-b')
-        // console.log(conf)
         r.push(new HtmlWebpackPlugin(conf))
     }
-    return r
+    return r;
 }
 
-// console.log(html_plugins())
-
+console.log(html_plugins())
 
 module.exports = {
     entry: entries(),
     output: {
-        path: path.join(__dirname, "js"),
+        path: path.join(__dirname, "dist"),
         filename: "[name].js",
     },
     plugins: html_plugins()
