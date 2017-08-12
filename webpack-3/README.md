@@ -19,6 +19,8 @@
 - [demo-18](demo-18) : react-hot(webpack v1) 参考：[链接1](https://github.com/gaearon/react-hot-boilerplate) [链接2](https://github.com/wkwiatek/react-hot-loader-minimal-boilerplate)
 - [demo-19](demo-19) : UglifyJsPlugin
 - [demo-20](demo-20) : webpack-merge
+- [demo-21](demo-21) : 缓存 `filename: '[name].[chunkhash:6].js'` 、 提取公共代码、`HashedModuleIdsPlugin`的使用
+- [demo-20](demo-20) : webpack-merge
 
 
 
