@@ -13,7 +13,24 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist'
+      // contentBase: commonPath.public,
+      host: 'localhost',
+      port: 3000,
+      // 启用 HMR 需要 new webpack.HotModuleReplacementPlugin()
+      // hot: true,
+      // hotOnly: true, //HMR
+      // historyApiFallback: true,
+      // publicPath: commonPath.public,
+      // headers: { "X-Custom-Header": "yes" },
+      // stats: { colors: true }
+      // quiet: false,
+      // progress: true,//报错无法识别，删除后也能正常刷新
+      // inline: true,
+      // clientLogLevel: "info",
+      // lazy: false,
+      // stats: 'errors-only',
+      // compress: true,
+      // noInfo: true,
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
