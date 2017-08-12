@@ -6,15 +6,33 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
   entry: {
     app: './src/index.js',
-    print: './src/print.js'
+    print: './src/print.js',
   },
+  // __webpack_public_path__ : 'testtest',
   output: {
     filename: '[name].[chunkhash:30].js',
     path: path.resolve(__dirname, 'dist'),
+    // publicPath: "/assets/",
+    // publicPath: "http://cdn.com/assets/",
+    //你也可以加上完整的url，效果与上面一致（不需要修改index.html中引用bundle.js的路径，但发布生产环境时，需要使用插件才能批量修改引用地址为cdn地址）。
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    // contentBase: path.join(__dirname, "dist"),
+    port: 7777,
+    // host: 'localhost',
+    // hot: true,
+    // inline: true,
+    // filename: '[name].js',
+    // historyApiFallback: true,
+    // publicPath: '/assets/',
+    // proxy: {
+    //     "/api": {
+    //         target: "http://localhost:8075",
+    //         secure: false
+    //     }
+    // }
   },
   plugins: [
     // new CleanWebpackPlugin(['dist']),

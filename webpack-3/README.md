@@ -20,7 +20,8 @@
 - [demo-19](demo-19) : UglifyJsPlugin
 - [demo-20](demo-20) : webpack-merge
 - [demo-21](demo-21) : 缓存 `filename: '[name].[chunkhash:6].js'` 、 提取公共代码、`HashedModuleIdsPlugin`的使用
-- [demo-20](demo-20) : webpack-merge
+- [demo-22](demo-22) : output.publicPath
+- [demo-23](demo-23) : ClI 命令
 
 
 
