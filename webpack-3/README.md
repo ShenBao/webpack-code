@@ -22,6 +22,16 @@
 - [demo-21](demo-21) : 缓存 `filename: '[name].[chunkhash:6].js'` 、 提取公共代码、`HashedModuleIdsPlugin`的使用
 - [demo-22](demo-22) : output.publicPath
 - [demo-23](demo-23) : ClI 命令
+- [demo-24](demo-24) : Node.js API -> Compiler
+- [demo-25](demo-25) : 入口 输出 参数配置
+- [demo-26](demo-26) : 模块(Module) 
+- [demo-27](demo-27) : 解析(Resolve) 
+- [demo-28](demo-28) : 插件(Plugins)
+- [demo-29](demo-29) : 开发中 Server(DevServer)
+- [demo-30](demo-30) : Watch 和 WatchOptions
+- [demo-31](demo-31) : 外部扩展(Externals)
+- [demo-32](demo-32) : 性能(Performance)  &&  统计(Stats)
+- [demo-33](demo-33) : loader的使用
 
 
 

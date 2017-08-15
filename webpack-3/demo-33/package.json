@@ -4,8 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open",
-    "dev": "webpack-dev-server --open --progress --profile",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,12 +11,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-runtime": "^6.25.0",
     "webpack": "^3.4.1"
   },
   "devDependencies": {
-    "clean-webpack-plugin": "^0.1.16",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "cache-loader": "^1.0.3",
+    "css-loader": "^0.28.4",
     "html-webpack-plugin": "^2.30.1",
-    "inline-source-map": "^0.6.2",
-    "webpack-dev-server": "^2.6.1"
+    "style-loader": "^0.18.2"
   }
 }

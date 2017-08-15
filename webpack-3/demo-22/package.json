@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "watch": "webpack --progress --watch",
     "start": "webpack-dev-server --open",
-    "dev": "webpack-dev-server --open --progress --profile",
-
-
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
