@@ -32,6 +32,7 @@
 - [demo-31](demo-31) : 外部扩展(Externals)
 - [demo-32](demo-32) : 性能(Performance)  &&  统计(Stats)
 - [demo-33](demo-33) : loader的使用
+- [demo-34](demo-34) : Plugins的使用
 
 
 
