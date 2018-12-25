@@ -8,6 +8,16 @@
 4. [使用 Webpack DevServer](./01/04.md)
 
 
+## 配置
+
+1. [Entry](./02/01.md)
+2. [Output](./02/02.md)
+3. [Module](./02/03.md)
+4. [Resolve](./02/04.md)
+5. [devServer](./02/05.md)
+6. [SourceMap](./02/06.md)
+7. [其他配置项](./02/07.md)
+
 
 
 
