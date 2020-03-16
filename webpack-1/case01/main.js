@@ -1,1 +1,0 @@
-document.write('<div>hi,你好123!</div>')

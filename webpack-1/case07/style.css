@@ -1,9 +1,0 @@
-.abc{
-  color: green;
-  font-size: 60px;
-}
-
-:global(.abc) {
-  color: blue;
-  font-size: 30px;
-}
