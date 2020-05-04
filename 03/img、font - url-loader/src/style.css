@@ -1,0 +1,14 @@
+@font-face {
+  src: url('./assets/SourceHanSerifSC-Heavy.otf') format('truetype');
+  font-family: 'SourceHanSerifSC-Heavy';
+}
+body {
+  margin: 50px;
+}
+#root {
+  font-family: 'SourceHanSerifSC-Heavy';
+}
+.app {
+  font-size: 18px;
+  text-align: center;
+}

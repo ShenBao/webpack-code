@@ -1,0 +1,11 @@
+body {
+    margin: 50px;
+}
+#root {
+  background: yellowgreen;
+  border-radius: 5px;
+}
+.app {
+  font-size: 24px;
+  text-align: center;
+}
