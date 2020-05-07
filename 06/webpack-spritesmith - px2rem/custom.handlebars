@@ -1,0 +1,8 @@
+@mixin sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x $sprite-offset-y;
+    $sprite-total-width: nth($sprite, 7);
+    $sprite-total-height: nth($sprite, 8);
+    background-size:$sprite-total-width $sprite-total-height;
+}

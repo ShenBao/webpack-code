@@ -1,0 +1,32 @@
+
+.biscuit {
+  @include sprite($example-biscuit);
+}
+
+.cake {
+  @include sprite($example-cake);
+}
+
+.soda {
+  @include sprite($example-soda);
+}
+
+.tea {
+  @include sprite($example-tea);
+}
+
+.douban {
+  @include sprite($icon-douban);
+}
+
+.qq {
+  @include sprite($icon-qq);
+}
+
+.renren {
+  @include sprite($icon-renren);
+}
+
+.weibo {
+  @include sprite($icon-weibo);
+}

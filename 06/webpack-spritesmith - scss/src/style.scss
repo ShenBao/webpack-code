@@ -1,0 +1,33 @@
+@import './assets/_sprite.scss';
+
+.biscuit {
+  @include sprite($biscuit);
+}
+
+.cake {
+  @include sprite($cake);
+}
+
+.soda {
+  @include sprite($soda);
+}
+
+.tea {
+  @include sprite($tea);
+}
+
+.douban {
+  @include sprite($douban);
+}
+
+.qq {
+  @include sprite($qq);
+}
+
+.renren {
+  @include sprite($renren);
+}
+
+.weibo {
+  @include sprite($weibo);
+}

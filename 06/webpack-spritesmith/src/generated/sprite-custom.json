@@ -1,0 +1,538 @@
+{
+  "items": [
+    {
+      "name": "close__red",
+      "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\close\\ico\\red.png",
+      "x": 0,
+      "y": 0,
+      "width": 17,
+      "height": 17,
+      "image": "~sprite.fdaef4.png",
+      "escaped_image": "~sprite.fdaef4.png",
+      "total_width": 72,
+      "total_height": 42,
+      "offset_x": 0,
+      "offset_y": 0,
+      "px": {
+        "x": "0px",
+        "y": "0px",
+        "offset_x": "0px",
+        "offset_y": "0px",
+        "height": "17px",
+        "width": "17px",
+        "total_height": "42px",
+        "total_width": "72px"
+      }
+    },
+    {
+      "name": "close__turquoise",
+      "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\close\\ico\\turquoise.png",
+      "x": 27,
+      "y": 0,
+      "width": 17,
+      "height": 17,
+      "image": "~sprite.fdaef4.png",
+      "escaped_image": "~sprite.fdaef4.png",
+      "total_width": 72,
+      "total_height": 42,
+      "offset_x": -27,
+      "offset_y": 0,
+      "px": {
+        "x": "27px",
+        "y": "0px",
+        "offset_x": "-27px",
+        "offset_y": "0px",
+        "height": "17px",
+        "width": "17px",
+        "total_height": "42px",
+        "total_width": "72px"
+      }
+    },
+    {
+      "name": "send__hover",
+      "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\send\\ico\\hover.png",
+      "x": 0,
+      "y": 27,
+      "width": 18,
+      "height": 15,
+      "image": "~sprite.fdaef4.png",
+      "escaped_image": "~sprite.fdaef4.png",
+      "total_width": 72,
+      "total_height": 42,
+      "offset_x": 0,
+      "offset_y": -27,
+      "px": {
+        "x": "0px",
+        "y": "27px",
+        "offset_x": "0px",
+        "offset_y": "-27px",
+        "height": "15px",
+        "width": "18px",
+        "total_height": "42px",
+        "total_width": "72px"
+      }
+    },
+    {
+      "name": "send__normal",
+      "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\send\\ico\\normal.png",
+      "x": 54,
+      "y": 0,
+      "width": 18,
+      "height": 15,
+      "image": "~sprite.fdaef4.png",
+      "escaped_image": "~sprite.fdaef4.png",
+      "total_width": 72,
+      "total_height": 42,
+      "offset_x": -54,
+      "offset_y": 0,
+      "px": {
+        "x": "54px",
+        "y": "0px",
+        "offset_x": "-54px",
+        "offset_y": "0px",
+        "height": "15px",
+        "width": "18px",
+        "total_height": "42px",
+        "total_width": "72px"
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "name": "close__red",
+      "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\close\\ico\\red.png",
+      "x": 0,
+      "y": 0,
+      "width": 17,
+      "height": 17,
+      "image": "~sprite.fdaef4.png",
+      "escaped_image": "~sprite.fdaef4.png",
+      "total_width": 72,
+      "total_height": 42,
+      "offset_x": 0,
+      "offset_y": 0,
+      "px": {
+        "x": "0px",
+        "y": "0px",
+        "offset_x": "0px",
+        "offset_y": "0px",
+        "height": "17px",
+        "width": "17px",
+        "total_height": "42px",
+        "total_width": "72px"
+      }
+    },
+    {
+      "name": "close__turquoise",
+      "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\close\\ico\\turquoise.png",
+      "x": 27,
+      "y": 0,
+      "width": 17,
+      "height": 17,
+      "image": "~sprite.fdaef4.png",
+      "escaped_image": "~sprite.fdaef4.png",
+      "total_width": 72,
+      "total_height": 42,
+      "offset_x": -27,
+      "offset_y": 0,
+      "px": {
+        "x": "27px",
+        "y": "0px",
+        "offset_x": "-27px",
+        "offset_y": "0px",
+        "height": "17px",
+        "width": "17px",
+        "total_height": "42px",
+        "total_width": "72px"
+      }
+    },
+    {
+      "name": "send__hover",
+      "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\send\\ico\\hover.png",
+      "x": 0,
+      "y": 27,
+      "width": 18,
+      "height": 15,
+      "image": "~sprite.fdaef4.png",
+      "escaped_image": "~sprite.fdaef4.png",
+      "total_width": 72,
+      "total_height": 42,
+      "offset_x": 0,
+      "offset_y": -27,
+      "px": {
+        "x": "0px",
+        "y": "27px",
+        "offset_x": "0px",
+        "offset_y": "-27px",
+        "height": "15px",
+        "width": "18px",
+        "total_height": "42px",
+        "total_width": "72px"
+      }
+    },
+    {
+      "name": "send__normal",
+      "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\send\\ico\\normal.png",
+      "x": 54,
+      "y": 0,
+      "width": 18,
+      "height": 15,
+      "image": "~sprite.fdaef4.png",
+      "escaped_image": "~sprite.fdaef4.png",
+      "total_width": 72,
+      "total_height": 42,
+      "offset_x": -54,
+      "offset_y": 0,
+      "px": {
+        "x": "54px",
+        "y": "0px",
+        "offset_x": "-54px",
+        "offset_y": "0px",
+        "height": "15px",
+        "width": "18px",
+        "total_height": "42px",
+        "total_width": "72px"
+      }
+    }
+  ],
+  "spritesheet": {
+    "width": 72,
+    "height": 42,
+    "image": "~sprite.fdaef4.png",
+    "name": "spritesheet",
+    "escaped_image": "~sprite.fdaef4.png",
+    "px": {
+      "height": "42px",
+      "width": "72px"
+    }
+  },
+  "spritesheet_name": "spritesheet",
+  "spritesheet_info": {
+    "name": "spritesheet"
+  },
+  "retina_sprites": [
+    {
+      "name": "retina_close__red",
+      "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\close\\ico\\red@2x.png",
+      "x": 0,
+      "y": 0,
+      "width": 34,
+      "height": 34,
+      "image": "~sprite.fbe442@2x.png",
+      "escaped_image": "~sprite.fbe442@2x.png",
+      "total_width": 144,
+      "total_height": 84,
+      "offset_x": 0,
+      "offset_y": 0,
+      "px": {
+        "x": "0px",
+        "y": "0px",
+        "offset_x": "0px",
+        "offset_y": "0px",
+        "height": "34px",
+        "width": "34px",
+        "total_height": "84px",
+        "total_width": "144px"
+      }
+    },
+    {
+      "name": "retina_close__turquoise",
+      "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\close\\ico\\turquoise@2x.png",
+      "x": 54,
+      "y": 0,
+      "width": 34,
+      "height": 34,
+      "image": "~sprite.fbe442@2x.png",
+      "escaped_image": "~sprite.fbe442@2x.png",
+      "total_width": 144,
+      "total_height": 84,
+      "offset_x": -54,
+      "offset_y": 0,
+      "px": {
+        "x": "54px",
+        "y": "0px",
+        "offset_x": "-54px",
+        "offset_y": "0px",
+        "height": "34px",
+        "width": "34px",
+        "total_height": "84px",
+        "total_width": "144px"
+      }
+    },
+    {
+      "name": "retina_send__hover",
+      "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\send\\ico\\hover@2x.png",
+      "x": 0,
+      "y": 54,
+      "width": 36,
+      "height": 30,
+      "image": "~sprite.fbe442@2x.png",
+      "escaped_image": "~sprite.fbe442@2x.png",
+      "total_width": 144,
+      "total_height": 84,
+      "offset_x": 0,
+      "offset_y": -54,
+      "px": {
+        "x": "0px",
+        "y": "54px",
+        "offset_x": "0px",
+        "offset_y": "-54px",
+        "height": "30px",
+        "width": "36px",
+        "total_height": "84px",
+        "total_width": "144px"
+      }
+    },
+    {
+      "name": "retina_send__normal",
+      "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\send\\ico\\normal@2x.png",
+      "x": 108,
+      "y": 0,
+      "width": 36,
+      "height": 30,
+      "image": "~sprite.fbe442@2x.png",
+      "escaped_image": "~sprite.fbe442@2x.png",
+      "total_width": 144,
+      "total_height": 84,
+      "offset_x": -108,
+      "offset_y": 0,
+      "px": {
+        "x": "108px",
+        "y": "0px",
+        "offset_x": "-108px",
+        "offset_y": "0px",
+        "height": "30px",
+        "width": "36px",
+        "total_height": "84px",
+        "total_width": "144px"
+      }
+    }
+  ],
+  "retina_spritesheet": {
+    "width": 144,
+    "height": 84,
+    "image": "~sprite.fbe442@2x.png",
+    "escaped_image": "~sprite.fbe442@2x.png",
+    "px": {
+      "height": "84px",
+      "width": "144px"
+    }
+  },
+  "retina_spritesheet_info": {
+    "name": "retina-spritesheet"
+  },
+  "retina_groups": [
+    {
+      "name": "close__red",
+      "index": 0,
+      "normal": {
+        "name": "close__red",
+        "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\close\\ico\\red.png",
+        "x": 0,
+        "y": 0,
+        "width": 17,
+        "height": 17,
+        "image": "~sprite.fdaef4.png",
+        "escaped_image": "~sprite.fdaef4.png",
+        "total_width": 72,
+        "total_height": 42,
+        "offset_x": 0,
+        "offset_y": 0,
+        "px": {
+          "x": "0px",
+          "y": "0px",
+          "offset_x": "0px",
+          "offset_y": "0px",
+          "height": "17px",
+          "width": "17px",
+          "total_height": "42px",
+          "total_width": "72px"
+        }
+      },
+      "retina": {
+        "name": "retina_close__red",
+        "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\close\\ico\\red@2x.png",
+        "x": 0,
+        "y": 0,
+        "width": 34,
+        "height": 34,
+        "image": "~sprite.fbe442@2x.png",
+        "escaped_image": "~sprite.fbe442@2x.png",
+        "total_width": 144,
+        "total_height": 84,
+        "offset_x": 0,
+        "offset_y": 0,
+        "px": {
+          "x": "0px",
+          "y": "0px",
+          "offset_x": "0px",
+          "offset_y": "0px",
+          "height": "34px",
+          "width": "34px",
+          "total_height": "84px",
+          "total_width": "144px"
+        }
+      }
+    },
+    {
+      "name": "close__turquoise",
+      "index": 1,
+      "normal": {
+        "name": "close__turquoise",
+        "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\close\\ico\\turquoise.png",
+        "x": 27,
+        "y": 0,
+        "width": 17,
+        "height": 17,
+        "image": "~sprite.fdaef4.png",
+        "escaped_image": "~sprite.fdaef4.png",
+        "total_width": 72,
+        "total_height": 42,
+        "offset_x": -27,
+        "offset_y": 0,
+        "px": {
+          "x": "27px",
+          "y": "0px",
+          "offset_x": "-27px",
+          "offset_y": "0px",
+          "height": "17px",
+          "width": "17px",
+          "total_height": "42px",
+          "total_width": "72px"
+        }
+      },
+      "retina": {
+        "name": "retina_close__turquoise",
+        "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\close\\ico\\turquoise@2x.png",
+        "x": 54,
+        "y": 0,
+        "width": 34,
+        "height": 34,
+        "image": "~sprite.fbe442@2x.png",
+        "escaped_image": "~sprite.fbe442@2x.png",
+        "total_width": 144,
+        "total_height": 84,
+        "offset_x": -54,
+        "offset_y": 0,
+        "px": {
+          "x": "54px",
+          "y": "0px",
+          "offset_x": "-54px",
+          "offset_y": "0px",
+          "height": "34px",
+          "width": "34px",
+          "total_height": "84px",
+          "total_width": "144px"
+        }
+      }
+    },
+    {
+      "name": "send__hover",
+      "index": 2,
+      "normal": {
+        "name": "send__hover",
+        "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\send\\ico\\hover.png",
+        "x": 0,
+        "y": 27,
+        "width": 18,
+        "height": 15,
+        "image": "~sprite.fdaef4.png",
+        "escaped_image": "~sprite.fdaef4.png",
+        "total_width": 72,
+        "total_height": 42,
+        "offset_x": 0,
+        "offset_y": -27,
+        "px": {
+          "x": "0px",
+          "y": "27px",
+          "offset_x": "0px",
+          "offset_y": "-27px",
+          "height": "15px",
+          "width": "18px",
+          "total_height": "42px",
+          "total_width": "72px"
+        }
+      },
+      "retina": {
+        "name": "retina_send__hover",
+        "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\send\\ico\\hover@2x.png",
+        "x": 0,
+        "y": 54,
+        "width": 36,
+        "height": 30,
+        "image": "~sprite.fbe442@2x.png",
+        "escaped_image": "~sprite.fbe442@2x.png",
+        "total_width": 144,
+        "total_height": 84,
+        "offset_x": 0,
+        "offset_y": -54,
+        "px": {
+          "x": "0px",
+          "y": "54px",
+          "offset_x": "0px",
+          "offset_y": "-54px",
+          "height": "30px",
+          "width": "36px",
+          "total_height": "84px",
+          "total_width": "144px"
+        }
+      }
+    },
+    {
+      "name": "send__normal",
+      "index": 3,
+      "normal": {
+        "name": "send__normal",
+        "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\send\\ico\\normal.png",
+        "x": 54,
+        "y": 0,
+        "width": 18,
+        "height": 15,
+        "image": "~sprite.fdaef4.png",
+        "escaped_image": "~sprite.fdaef4.png",
+        "total_width": 72,
+        "total_height": 42,
+        "offset_x": -54,
+        "offset_y": 0,
+        "px": {
+          "x": "54px",
+          "y": "0px",
+          "offset_x": "-54px",
+          "offset_y": "0px",
+          "height": "15px",
+          "width": "18px",
+          "total_height": "42px",
+          "total_width": "72px"
+        }
+      },
+      "retina": {
+        "name": "retina_send__normal",
+        "source_image": "D:\\workspace-github\\demo\\webpack-code\\06\\webpack-spritesmith\\src\\sprite_img\\send\\ico\\normal@2x.png",
+        "x": 108,
+        "y": 0,
+        "width": 36,
+        "height": 30,
+        "image": "~sprite.fbe442@2x.png",
+        "escaped_image": "~sprite.fbe442@2x.png",
+        "total_width": 144,
+        "total_height": 84,
+        "offset_x": -108,
+        "offset_y": 0,
+        "px": {
+          "x": "108px",
+          "y": "0px",
+          "offset_x": "-108px",
+          "offset_y": "0px",
+          "height": "30px",
+          "width": "36px",
+          "total_height": "84px",
+          "total_width": "144px"
+        }
+      }
+    }
+  ],
+  "retina_groups_info": {
+    "name": "retina-groups"
+  },
+  "options": {}
+}

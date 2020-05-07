@@ -1,0 +1,69 @@
+$sprite-sprite-biscuit: (128px, 0px, -128px, 0px, 32px, 32px, 202px, 160px, '~sprite.ca82dd0bd3ee5021ad53bf2c07826f56.png', 'biscuit');
+$sprite-sprite-cake: (128px, 42px, -128px, -42px, 32px, 32px, 202px, 160px, '~sprite.ca82dd0bd3ee5021ad53bf2c07826f56.png', 'cake');
+$sprite-sprite-douban: (0px, 0px, 0px, 0px, 54px, 54px, 202px, 160px, '~sprite.ca82dd0bd3ee5021ad53bf2c07826f56.png', 'douban');
+$sprite-sprite-equals: (128px, 84px, -128px, -84px, 32px, 32px, 202px, 160px, '~sprite.ca82dd0bd3ee5021ad53bf2c07826f56.png', 'equals');
+$sprite-sprite-fork: (0px, 128px, 0px, -128px, 32px, 32px, 202px, 160px, '~sprite.ca82dd0bd3ee5021ad53bf2c07826f56.png', 'fork');
+$sprite-sprite-github: (42px, 128px, -42px, -128px, 32px, 32px, 202px, 160px, '~sprite.ca82dd0bd3ee5021ad53bf2c07826f56.png', 'github');
+$sprite-sprite-plus: (84px, 128px, -84px, -128px, 32px, 32px, 202px, 160px, '~sprite.ca82dd0bd3ee5021ad53bf2c07826f56.png', 'plus');
+$sprite-sprite-qq: (64px, 0px, -64px, 0px, 54px, 54px, 202px, 160px, '~sprite.ca82dd0bd3ee5021ad53bf2c07826f56.png', 'qq');
+$sprite-sprite-renren: (0px, 64px, 0px, -64px, 54px, 54px, 202px, 160px, '~sprite.ca82dd0bd3ee5021ad53bf2c07826f56.png', 'renren');
+$sprite-sprite-soda: (126px, 128px, -126px, -128px, 32px, 32px, 202px, 160px, '~sprite.ca82dd0bd3ee5021ad53bf2c07826f56.png', 'soda');
+$sprite-sprite-tea: (170px, 0px, -170px, 0px, 32px, 32px, 202px, 160px, '~sprite.ca82dd0bd3ee5021ad53bf2c07826f56.png', 'tea');
+$sprite-sprite-twitter: (170px, 42px, -170px, -42px, 32px, 32px, 202px, 160px, '~sprite.ca82dd0bd3ee5021ad53bf2c07826f56.png', 'twitter');
+$sprite-sprite-weibo: (64px, 64px, -64px, -64px, 54px, 54px, 202px, 160px, '~sprite.ca82dd0bd3ee5021ad53bf2c07826f56.png', 'weibo');
+
+$sprite-sprites: (
+biscuit: $sprite-sprite-biscuit,
+cake: $sprite-sprite-cake,
+douban: $sprite-sprite-douban,
+equals: $sprite-sprite-equals,
+fork: $sprite-sprite-fork,
+github: $sprite-sprite-github,
+plus: $sprite-sprite-plus,
+qq: $sprite-sprite-qq,
+renren: $sprite-sprite-renren,
+soda: $sprite-sprite-soda,
+tea: $sprite-sprite-tea,
+twitter: $sprite-sprite-twitter,
+weibo: $sprite-sprite-weibo,
+);
+
+@mixin sprite-sprite-width($sprite) {
+    width: nth($sprite, 5);
+}
+
+@mixin sprite-sprite-height($sprite) {
+    height: nth($sprite, 6);
+}
+
+@mixin sprite-sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x $sprite-offset-y;
+}
+
+@mixin sprite-sprite-size($sprite) {
+    background-size: nth($sprite, 7) nth($sprite, 8);
+}
+
+@mixin sprite-sprite-image($sprite) {
+    $sprite-image: nth($sprite, 9);
+    background-image: url(#{$sprite-image});
+}
+
+@mixin sprite-sprite($name) {
+    @include sprite-sprite-image(map-get($sprite-sprites, #{$name}));
+    @include sprite-sprite-position(map-get($sprite-sprites, #{$name}));
+    @include sprite-sprite-size(map-get($sprite-sprites, #{$name}));
+    @include sprite-sprite-width(map-get($sprite-sprites, #{$name}));
+    @include sprite-sprite-height(map-get($sprite-sprites, #{$name}));
+}
+
+@mixin sprite-sprites($sprites) {
+    @each $sprite in $sprites {
+        $sprite-name: nth($sprite, 10);
+        .sprite-#{$sprite-name} {
+            @include sprite-sprite($sprite);
+        }
+    }
+}

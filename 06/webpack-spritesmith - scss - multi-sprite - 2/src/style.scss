@@ -1,0 +1,32 @@
+
+.biscuit {
+  @include example-sprite(biscuit);
+}
+
+.cake {
+  @include example-sprite(cake);
+}
+
+.soda {
+  @include example-sprite(soda);
+}
+
+.tea {
+  @include example-sprite(tea);
+}
+
+.douban {
+  @include icon-sprite(douban);
+}
+
+.qq {
+  @include icon-sprite(qq);
+}
+
+.renren {
+  @include icon-sprite(renren);
+}
+
+.weibo {
+  @include icon-sprite(weibo);
+}

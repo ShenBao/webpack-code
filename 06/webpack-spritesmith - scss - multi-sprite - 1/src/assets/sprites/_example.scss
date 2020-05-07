@@ -1,0 +1,123 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$example-biscuit-name: 'example_biscuit';
+$example-biscuit-x: 0px;
+$example-biscuit-y: 0px;
+$example-biscuit-offset-x: 0px;
+$example-biscuit-offset-y: 0px;
+$example-biscuit-width: 32px;
+$example-biscuit-height: 32px;
+$example-biscuit-total-width: 74px;
+$example-biscuit-total-height: 74px;
+$example-biscuit-image: './assets/sprites/example.6f0a47a46da19cadda1e813bdc532d8f.png';
+$example-biscuit: (0px, 0px, 0px, 0px, 32px, 32px, 74px, 74px, './assets/sprites/example.6f0a47a46da19cadda1e813bdc532d8f.png', 'example_biscuit', );
+$example-cake-name: 'example_cake';
+$example-cake-x: 42px;
+$example-cake-y: 0px;
+$example-cake-offset-x: -42px;
+$example-cake-offset-y: 0px;
+$example-cake-width: 32px;
+$example-cake-height: 32px;
+$example-cake-total-width: 74px;
+$example-cake-total-height: 74px;
+$example-cake-image: './assets/sprites/example.6f0a47a46da19cadda1e813bdc532d8f.png';
+$example-cake: (42px, 0px, -42px, 0px, 32px, 32px, 74px, 74px, './assets/sprites/example.6f0a47a46da19cadda1e813bdc532d8f.png', 'example_cake', );
+$example-soda-name: 'example_soda';
+$example-soda-x: 0px;
+$example-soda-y: 42px;
+$example-soda-offset-x: 0px;
+$example-soda-offset-y: -42px;
+$example-soda-width: 32px;
+$example-soda-height: 32px;
+$example-soda-total-width: 74px;
+$example-soda-total-height: 74px;
+$example-soda-image: './assets/sprites/example.6f0a47a46da19cadda1e813bdc532d8f.png';
+$example-soda: (0px, 42px, 0px, -42px, 32px, 32px, 74px, 74px, './assets/sprites/example.6f0a47a46da19cadda1e813bdc532d8f.png', 'example_soda', );
+$example-tea-name: 'example_tea';
+$example-tea-x: 42px;
+$example-tea-y: 42px;
+$example-tea-offset-x: -42px;
+$example-tea-offset-y: -42px;
+$example-tea-width: 32px;
+$example-tea-height: 32px;
+$example-tea-total-width: 74px;
+$example-tea-total-height: 74px;
+$example-tea-image: './assets/sprites/example.6f0a47a46da19cadda1e813bdc532d8f.png';
+$example-tea: (42px, 42px, -42px, -42px, 32px, 32px, 74px, 74px, './assets/sprites/example.6f0a47a46da19cadda1e813bdc532d8f.png', 'example_tea', );
+$example-width: 74px;
+$example-height: 74px;
+$example-image: './assets/sprites/example.6f0a47a46da19cadda1e813bdc532d8f.png';
+$example-sprites: ($example-biscuit, $example-cake, $example-soda, $example-tea, );
+$example: (74px, 74px, './assets/sprites/example.6f0a47a46da19cadda1e813bdc532d8f.png', $example-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

@@ -1,0 +1,56 @@
+$icon-sprite-douban: (0px, 0px, 0px, 0px, 54px, 54px, 160px, 118px, './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png', 'douban');
+$icon-sprite-github: (128px, 0px, -128px, 0px, 32px, 32px, 160px, 118px, './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png', 'github');
+$icon-sprite-qq: (64px, 0px, -64px, 0px, 54px, 54px, 160px, 118px, './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png', 'qq');
+$icon-sprite-renren: (0px, 64px, 0px, -64px, 54px, 54px, 160px, 118px, './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png', 'renren');
+$icon-sprite-twitter: (128px, 42px, -128px, -42px, 32px, 32px, 160px, 118px, './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png', 'twitter');
+$icon-sprite-weibo: (64px, 64px, -64px, -64px, 54px, 54px, 160px, 118px, './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png', 'weibo');
+
+$icon-sprites: (
+	douban: $icon-sprite-douban,
+	github: $icon-sprite-github,
+	qq: $icon-sprite-qq,
+	renren: $icon-sprite-renren,
+	twitter: $icon-sprite-twitter,
+	weibo: $icon-sprite-weibo,
+);
+
+@mixin icon-sprite-width($sprite) {
+    width: nth($sprite, 5);
+}
+
+@mixin icon-sprite-height($sprite) {
+    height: nth($sprite, 6);
+}
+
+@mixin icon-sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x $sprite-offset-y;
+}
+
+@mixin icon-sprite-size($sprite) {
+    background-size: nth($sprite, 7) nth($sprite, 8);
+}
+
+@mixin icon-sprite-image($sprite) {
+    $sprite-image: nth($sprite, 9);
+    background-image: url(#{$sprite-image});
+}
+
+@mixin icon-sprite($name) {
+    @include icon-sprite-image(map-get($icon-sprites, #{$name}));
+    @include icon-sprite-position(map-get($icon-sprites, #{$name}));
+    @include icon-sprite-size(map-get($icon-sprites, #{$name}));
+    @include icon-sprite-width(map-get($icon-sprites, #{$name}));
+    @include icon-sprite-height(map-get($icon-sprites, #{$name}));
+    background-repeat: no-repeat;
+}
+
+@mixin all-icon-sprites() {
+    @each $key, $val in $icon-sprites {
+        $sprite-name: nth($val, 10);
+        .icon-#{$sprite-name}-sprites {
+            @include icon-sprite($key);
+        }
+    }
+}

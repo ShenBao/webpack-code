@@ -1,0 +1,62 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-close__red {
+  background-image: url(~sprite.fdaef4.png);
+  background-position: 0px 0px;
+  width: 17px;
+  height: 17px;
+}
+.icon-close__turquoise {
+  background-image: url(~sprite.fdaef4.png);
+  background-position: -27px 0px;
+  width: 17px;
+  height: 17px;
+}
+.icon-send__hover {
+  background-image: url(~sprite.fdaef4.png);
+  background-position: 0px -27px;
+  width: 18px;
+  height: 15px;
+}
+.icon-send__normal {
+  background-image: url(~sprite.fdaef4.png);
+  background-position: -54px 0px;
+  width: 18px;
+  height: 15px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  .icon-close__red {
+    background-image: url(~sprite.fbe442@2x.png);
+    background-size: 72px 42px;
+  }
+  .icon-close__turquoise {
+    background-image: url(~sprite.fbe442@2x.png);
+    background-size: 72px 42px;
+  }
+  .icon-send__hover {
+    background-image: url(~sprite.fbe442@2x.png);
+    background-size: 72px 42px;
+  }
+  .icon-send__normal {
+    background-image: url(~sprite.fbe442@2x.png);
+    background-size: 72px 42px;
+  }
+}

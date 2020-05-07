@@ -1,0 +1,145 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-douban-name: 'icon_douban';
+$icon-douban-x: 0px;
+$icon-douban-y: 0px;
+$icon-douban-offset-x: 0px;
+$icon-douban-offset-y: 0px;
+$icon-douban-width: 54px;
+$icon-douban-height: 54px;
+$icon-douban-total-width: 160px;
+$icon-douban-total-height: 118px;
+$icon-douban-image: './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png';
+$icon-douban: (0px, 0px, 0px, 0px, 54px, 54px, 160px, 118px, './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png', 'icon_douban', );
+$icon-github-name: 'icon_github';
+$icon-github-x: 128px;
+$icon-github-y: 0px;
+$icon-github-offset-x: -128px;
+$icon-github-offset-y: 0px;
+$icon-github-width: 32px;
+$icon-github-height: 32px;
+$icon-github-total-width: 160px;
+$icon-github-total-height: 118px;
+$icon-github-image: './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png';
+$icon-github: (128px, 0px, -128px, 0px, 32px, 32px, 160px, 118px, './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png', 'icon_github', );
+$icon-qq-name: 'icon_qq';
+$icon-qq-x: 64px;
+$icon-qq-y: 0px;
+$icon-qq-offset-x: -64px;
+$icon-qq-offset-y: 0px;
+$icon-qq-width: 54px;
+$icon-qq-height: 54px;
+$icon-qq-total-width: 160px;
+$icon-qq-total-height: 118px;
+$icon-qq-image: './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png';
+$icon-qq: (64px, 0px, -64px, 0px, 54px, 54px, 160px, 118px, './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png', 'icon_qq', );
+$icon-renren-name: 'icon_renren';
+$icon-renren-x: 0px;
+$icon-renren-y: 64px;
+$icon-renren-offset-x: 0px;
+$icon-renren-offset-y: -64px;
+$icon-renren-width: 54px;
+$icon-renren-height: 54px;
+$icon-renren-total-width: 160px;
+$icon-renren-total-height: 118px;
+$icon-renren-image: './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png';
+$icon-renren: (0px, 64px, 0px, -64px, 54px, 54px, 160px, 118px, './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png', 'icon_renren', );
+$icon-twitter-name: 'icon_twitter';
+$icon-twitter-x: 128px;
+$icon-twitter-y: 42px;
+$icon-twitter-offset-x: -128px;
+$icon-twitter-offset-y: -42px;
+$icon-twitter-width: 32px;
+$icon-twitter-height: 32px;
+$icon-twitter-total-width: 160px;
+$icon-twitter-total-height: 118px;
+$icon-twitter-image: './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png';
+$icon-twitter: (128px, 42px, -128px, -42px, 32px, 32px, 160px, 118px, './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png', 'icon_twitter', );
+$icon-weibo-name: 'icon_weibo';
+$icon-weibo-x: 64px;
+$icon-weibo-y: 64px;
+$icon-weibo-offset-x: -64px;
+$icon-weibo-offset-y: -64px;
+$icon-weibo-width: 54px;
+$icon-weibo-height: 54px;
+$icon-weibo-total-width: 160px;
+$icon-weibo-total-height: 118px;
+$icon-weibo-image: './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png';
+$icon-weibo: (64px, 64px, -64px, -64px, 54px, 54px, 160px, 118px, './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png', 'icon_weibo', );
+$icon-width: 160px;
+$icon-height: 118px;
+$icon-image: './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png';
+$icon-sprites: ($icon-douban, $icon-github, $icon-qq, $icon-renren, $icon-twitter, $icon-weibo, );
+$icon: (160px, 118px, './assets/sprites/icon.f262ebdddbcde67d9c0bc2d20ef54169.png', $icon-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

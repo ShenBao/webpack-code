@@ -1,0 +1,205 @@
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
+$close-red-name: 'close__red'
+$close-red-x: 0px
+$close-red-y: 0px
+$close-red-offset-x: 0px
+$close-red-offset-y: 0px
+$close-red-width: 17px
+$close-red-height: 17px
+$close-red-total-width: 72px
+$close-red-total-height: 42px
+$close-red-image: '~sprite.fdaef4.png'
+$close-red: (0px, 0px, 0px, 0px, 17px, 17px, 72px, 42px, '~sprite.fdaef4.png', 'close__red', )
+$close-turquoise-name: 'close__turquoise'
+$close-turquoise-x: 27px
+$close-turquoise-y: 0px
+$close-turquoise-offset-x: -27px
+$close-turquoise-offset-y: 0px
+$close-turquoise-width: 17px
+$close-turquoise-height: 17px
+$close-turquoise-total-width: 72px
+$close-turquoise-total-height: 42px
+$close-turquoise-image: '~sprite.fdaef4.png'
+$close-turquoise: (27px, 0px, -27px, 0px, 17px, 17px, 72px, 42px, '~sprite.fdaef4.png', 'close__turquoise', )
+$send-hover-name: 'send__hover'
+$send-hover-x: 0px
+$send-hover-y: 27px
+$send-hover-offset-x: 0px
+$send-hover-offset-y: -27px
+$send-hover-width: 18px
+$send-hover-height: 15px
+$send-hover-total-width: 72px
+$send-hover-total-height: 42px
+$send-hover-image: '~sprite.fdaef4.png'
+$send-hover: (0px, 27px, 0px, -27px, 18px, 15px, 72px, 42px, '~sprite.fdaef4.png', 'send__hover', )
+$send-normal-name: 'send__normal'
+$send-normal-x: 54px
+$send-normal-y: 0px
+$send-normal-offset-x: -54px
+$send-normal-offset-y: 0px
+$send-normal-width: 18px
+$send-normal-height: 15px
+$send-normal-total-width: 72px
+$send-normal-total-height: 42px
+$send-normal-image: '~sprite.fdaef4.png'
+$send-normal: (54px, 0px, -54px, 0px, 18px, 15px, 72px, 42px, '~sprite.fdaef4.png', 'send__normal', )
+$retina-close-red-name: 'retina_close__red'
+$retina-close-red-x: 0px
+$retina-close-red-y: 0px
+$retina-close-red-offset-x: 0px
+$retina-close-red-offset-y: 0px
+$retina-close-red-width: 34px
+$retina-close-red-height: 34px
+$retina-close-red-total-width: 144px
+$retina-close-red-total-height: 84px
+$retina-close-red-image: '~sprite.fbe442@2x.png'
+$retina-close-red: (0px, 0px, 0px, 0px, 34px, 34px, 144px, 84px, '~sprite.fbe442@2x.png', 'retina_close__red', )
+$retina-close-turquoise-name: 'retina_close__turquoise'
+$retina-close-turquoise-x: 54px
+$retina-close-turquoise-y: 0px
+$retina-close-turquoise-offset-x: -54px
+$retina-close-turquoise-offset-y: 0px
+$retina-close-turquoise-width: 34px
+$retina-close-turquoise-height: 34px
+$retina-close-turquoise-total-width: 144px
+$retina-close-turquoise-total-height: 84px
+$retina-close-turquoise-image: '~sprite.fbe442@2x.png'
+$retina-close-turquoise: (54px, 0px, -54px, 0px, 34px, 34px, 144px, 84px, '~sprite.fbe442@2x.png', 'retina_close__turquoise', )
+$retina-send-hover-name: 'retina_send__hover'
+$retina-send-hover-x: 0px
+$retina-send-hover-y: 54px
+$retina-send-hover-offset-x: 0px
+$retina-send-hover-offset-y: -54px
+$retina-send-hover-width: 36px
+$retina-send-hover-height: 30px
+$retina-send-hover-total-width: 144px
+$retina-send-hover-total-height: 84px
+$retina-send-hover-image: '~sprite.fbe442@2x.png'
+$retina-send-hover: (0px, 54px, 0px, -54px, 36px, 30px, 144px, 84px, '~sprite.fbe442@2x.png', 'retina_send__hover', )
+$retina-send-normal-name: 'retina_send__normal'
+$retina-send-normal-x: 108px
+$retina-send-normal-y: 0px
+$retina-send-normal-offset-x: -108px
+$retina-send-normal-offset-y: 0px
+$retina-send-normal-width: 36px
+$retina-send-normal-height: 30px
+$retina-send-normal-total-width: 144px
+$retina-send-normal-total-height: 84px
+$retina-send-normal-image: '~sprite.fbe442@2x.png'
+$retina-send-normal: (108px, 0px, -108px, 0px, 36px, 30px, 144px, 84px, '~sprite.fbe442@2x.png', 'retina_send__normal', )
+$spritesheet-width: 72px
+$spritesheet-height: 42px
+$spritesheet-image: '~sprite.fdaef4.png'
+$spritesheet-sprites: ($close-red, $close-turquoise, $send-hover, $send-normal, )
+$spritesheet: (72px, 42px, '~sprite.fdaef4.png', $spritesheet-sprites, )
+$retina-spritesheet-width: 144px
+$retina-spritesheet-height: 84px
+$retina-spritesheet-image: '~sprite.fbe442@2x.png'
+$retina-spritesheet-sprites: ($retina-close-red, $retina-close-turquoise, $retina-send-hover, $retina-send-normal, )
+$retina-spritesheet: (144px, 84px, '~sprite.fbe442@2x.png', $retina-spritesheet-sprites, )
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$close-red-group-name: 'close__red'
+$close-red-group: ('close__red', $close-red, $retina-close-red, )
+$close-turquoise-group-name: 'close__turquoise'
+$close-turquoise-group: ('close__turquoise', $close-turquoise, $retina-close-turquoise, )
+$send-hover-group-name: 'send__hover'
+$send-hover-group: ('send__hover', $send-hover, $retina-send-hover, )
+$send-normal-group-name: 'send__normal'
+$send-normal-group: ('send__normal', $send-normal, $retina-send-normal, )
+$retina-groups: ($close-red-group, $close-turquoise-group, $send-hover-group, $send-normal-group, )
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, )
+//
+// .icon-home
+//   @include retina-sprite($icon-home-group)
+@mixin sprite-background-size($sprite)
+  $sprite-total-width: nth($sprite, 7)
+  $sprite-total-height: nth($sprite, 8)
+  background-size: $sprite-total-width $sprite-total-height
+
+@mixin retina-sprite($retina-group)
+  $normal-sprite: nth($retina-group, 2)
+  $retina-sprite: nth($retina-group, 3)
+  @include sprite($normal-sprite)
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    @include sprite-image($retina-sprite)
+    @include sprite-background-size($normal-sprite)
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SASS
+//
+// @include retina-sprites($retina-groups)
+@mixin retina-sprites($retina-groups)
+  @each $retina-group in $retina-groups
+    $sprite-name: nth($retina-group, 1)
+    .#{$sprite-name}
+      @include retina-sprite($retina-group)
