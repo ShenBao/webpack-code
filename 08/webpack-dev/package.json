@@ -1,0 +1,9 @@
+{
+  "name": "webpack-dev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "less": "^3.11.1"
+  }
+}
