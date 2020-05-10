@@ -1,0 +1,27 @@
+{
+  "name": "webpack-loader-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "html-webpack-plugin": "^4.0.4",
+    "jszip": "^3.3.0",
+    "less": "^3.11.1",
+    "loader-utils": "^2.0.0",
+    "mime": "^2.4.4",
+    "mini-css-extract-plugin": "^0.9.0",
+    "qiniu": "^7.3.0",
+    "safe-require": "^1.0.3",
+    "schema-utils": "^2.6.5",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
