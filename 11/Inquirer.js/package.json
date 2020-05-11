@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "inquirer-datepicker-prompt": "^0.4.2",
+    "inquirer-select-line": "^1.1.3"
+  },
+  "dependencies": {
+    "inquirer-select-line": "^1.1.3"
+  }
+}

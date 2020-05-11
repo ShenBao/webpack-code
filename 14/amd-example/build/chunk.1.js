@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],[,function(n,o,i){var s;void 0===(s=function(){return{say:function(){console.log("A is saying.")}}}.call(o,i,o,n))||(n.exports=s)},function(n,o,i){var s;void 0===(s=function(){return{say:function(){console.log("B is saying.")}}}.call(o,i,o,n))||(n.exports=s)}]]);
