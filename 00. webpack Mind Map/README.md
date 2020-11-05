@@ -1,6 +1,6 @@
 # webpack Mind Map
 
-[![webpack-notes.png](../img/webpack-notes.png)](https://raw.githubusercontent.com/ShenBao/webpack-notes/master/img/webpack-notes.png)
+[![webpack-notes.svg](../img/webpack-notes.svg)](https://raw.githubusercontent.com/ShenBao/webpack-notes/master/img/webpack-notes.svg)
 
 ## More links
 
