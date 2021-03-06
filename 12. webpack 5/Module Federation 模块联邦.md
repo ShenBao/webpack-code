@@ -4,7 +4,7 @@
 
 > ## [动机](https://webpack.docschina.org/concepts/module-federation/#motivation)
 >
-> 多个独立的构建可以组成一个应用程序，这些独立的构建之间不应该存在依赖关系，因此可以单独开发和部>署它们。
+> 多个独立的构建可以组成一个应用程序，这些独立的构建之间不应该存在依赖关系，因此可以单独开发和部署它们。
 >
 > 这通常被称作微前端，但并不仅限于此。
 
@@ -18,7 +18,7 @@
 
 host 代码:
 
-```
+```js
 // /src/index.js
 import("./bootstrap");
 
@@ -47,7 +47,7 @@ export default App;
 
 host 配置：
 
-```
+```js
 ...
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
@@ -71,7 +71,7 @@ module.exports = {
 
 remote 代码：
 
-```
+```js
 // /src/index.js
 import("./bootstrap");
 
@@ -102,22 +102,46 @@ const Component = () => <button>Remote Component</button>;
 export default Component;
 ```
 
+remote配置：
+
+```js
+const { ModuleFederationPlugin } = require("webpack").container;
+
+module.exports = {
+	// ...,
+	plugins: [
+		new ModuleFederationPlugin({
+			name: "remote",
+			library: { type: "var", name: "remote" },
+			filename: "remoteEntry.js",
+			exposes: {
+				"./Component": "./src/Component",
+			},
+			shared: ["react", "react-dom"],
+		}),
+	],
+};
+```
+
 `host`中成功引入了`remote`的组件：
 
 ![image.png](https://upload-images.jianshu.io/upload_images/13434832-14b6436ec0a651d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800)
 
 不知道大家看到代码有没有很好奇为什么需要通过`index.js` 去动态加载 `bootstrap.js`，如果我们把 bootstrap 这一层去掉会不会有啥问题呢？我们来把`host`的`entry`直接设置为`"./src/bootstrap"`试试看：
+
 ![image.png](https://upload-images.jianshu.io/upload_images/13434832-0b1d280c2f257d0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800)
-这是为什么呢？我们先按下不表，接着往下看。
+
+这是为什么呢？接着往下看。
 
 ## host 究竟是怎么去消费 remote 的
 
 正确配置下的`host`的 js 文件加载顺序如下：
+
 ![image.png](https://upload-images.jianshu.io/upload_images/13434832-4a5f9f14165ce7ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
 
-我们先看看最早加载的 main.js 做了些什么:
+先看看最早加载的 main.js 做了些什么:
 
-```
+```js
 (() => {
 	// webpackBootstrap
 	var __webpack_modules__ = {
@@ -167,7 +191,7 @@ export default Component;
 
 main.js 执行 `webpack_require("./src/index.js")`去加载`index.js`,`index.js`通过`webpack_require.e`动态加载`bootstrap.js`。咋一看好像和 webpack4 没啥区别，但其实`webpack_require.e`已经面目全非了。
 
-```
+```js
 	(() => {
 		__webpack_require__.f = {}; // This file contains only the entry chunk. // The chunk loading function for additional chunks
 		__webpack_require__.e = chunkId => {
@@ -184,7 +208,7 @@ main.js 执行 `webpack_require("./src/index.js")`去加载`index.js`,`index.js`
 `webpack_require.e`会去遍历执行`webpack_require.f`上的所有属性，每个属性都是返回 promise 对象的函数，再通过`promise.all`使得当所有的属性的状态都为 resolve 时，`webpack_require.e`的状态才会 resolve。
 那么，`webpack_require.f`都有哪些属性呢？
 
-```
+```js
 __webpack_require__.f.remotes = (chunkId, promises) => {}
 __webpack_require__.f.consumes = (chunkId, promises) => {}
 __webpack_require__.f.j = (chunkId, promises) => {}
@@ -194,9 +218,9 @@ __webpack_require__.f.j = (chunkId, promises) => {}
 - `j`:原有的`webpack_require.e`函数；
 - `remotes`:用于加载`remote`提供的组件；
 
-我们重点来看看`__webpack_require__.f.remotes`:
+重点来看看 `__webpack_require__.f.remotes`:
 
-```
+```js
 (() => {
 		var chunkMapping = {
 			webpack_container_remote_remote_Component: ["webpack/container/remote/remote/Component"],
@@ -257,7 +281,7 @@ __webpack_require__.f.j = (chunkId, promises) => {}
 
 第一步实际上是去加载了`remote`的`remoteEntry.js`,那么我们先来看看`remoteEntry.js`的内容：
 
-```
+```js
 var remote;
 (() => {
 	// webpackBootstrap
