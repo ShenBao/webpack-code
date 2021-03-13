@@ -60,6 +60,7 @@ webpack 学习笔记
 1. [webpack 实现 SSR 打包](%2F04.%20webpack%20%E8%BF%9B%E9%98%B6%E7%94%A8%E6%B3%95%2F10.%20webpack%20%E5%AE%9E%E7%8E%B0%20SSR%20%E6%89%93%E5%8C%85.md)
 1. [优化构建时命令行的显示日志](%2F04.%20webpack%20%E8%BF%9B%E9%98%B6%E7%94%A8%E6%B3%95%2F11.%20%E4%BC%98%E5%8C%96%E6%9E%84%E5%BB%BA%E6%97%B6%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E6%98%BE%E7%A4%BA%E6%97%A5%E5%BF%97.md)
 1. [构建异常和中断处理](%2F04.%20webpack%20%E8%BF%9B%E9%98%B6%E7%94%A8%E6%B3%95%2F12.%20%E6%9E%84%E5%BB%BA%E5%BC%82%E5%B8%B8%E5%92%8C%E4%B8%AD%E6%96%AD%E5%A4%84%E7%90%86.md)
+1. [webpack-chain api](%2F04.%20webpack%20%E8%BF%9B%E9%98%B6%E7%94%A8%E6%B3%95%2F13.%20webpack-chain%20api.md)
 1. [使用 webpack-chain](%2F04.%20webpack%20%E8%BF%9B%E9%98%B6%E7%94%A8%E6%B3%95%2F13.%20%E4%BD%BF%E7%94%A8%20webpack-chain.md)
 1. [其他 Plugin](%2F04.%20webpack%20%E8%BF%9B%E9%98%B6%E7%94%A8%E6%B3%95%2F14.%20%E5%85%B6%E4%BB%96%20Plugin.md)
 
@@ -137,12 +138,14 @@ webpack 学习笔记
 1. [预备知识 commander](%2F11.%20%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E8%84%9A%E6%89%8B%E6%9E%B6%2F03.%20%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%20commander.md)
 1. [预备知识 download-git-repo、chalk、ora](%2F11.%20%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E8%84%9A%E6%89%8B%E6%9E%B6%2F04.%20%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%20download-git-repo%E3%80%81chalk%E3%80%81ora.md)
 1. [脚手架开发](%2F11.%20%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E8%84%9A%E6%89%8B%E6%9E%B6%2F05.%20%E8%84%9A%E6%89%8B%E6%9E%B6%E5%BC%80%E5%8F%91.md)
+1. [npm 包发布与管理](%2F11.%20%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E8%84%9A%E6%89%8B%E6%9E%B6%2F06.%20npm%20%E5%8C%85%E5%8F%91%E5%B8%83%E4%B8%8E%E7%AE%A1%E7%90%86.md)
 
 ## [12. webpack 5](%2F12.%20webpack%205%2FREADME.md)
 
 1. [webpack 5](%2F12.%20webpack%205%2F01.%20webpack%205.md)
 1. [webpack-dev-server](%2F12.%20webpack%205%2F02.%20webpack-dev-server.md)
 1. [Module Federation](%2F12.%20webpack%205%2F03.%20Module%20Federation.md)
+1. [Module Federation 模块联邦](%2F12.%20webpack%205%2FModule%20Federation%20%E6%A8%A1%E5%9D%97%E8%81%94%E9%82%A6.md)
 
 ## [13. 周边工具](%2F13.%20%E5%91%A8%E8%BE%B9%E5%B7%A5%E5%85%B7%2FREADME.md)
 

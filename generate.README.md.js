@@ -36,7 +36,9 @@ function readFileList (dir, filesList = []) {
         nextPath.includes ('.git') ||
         nextPath.includes ('node_modules') ||
         nextPath.includes('webpack.Link') ||
-        nextPath.includes('15. 其他) ||
+        nextPath.includes('webpack.Features') ||
+        nextPath.includes('15. 其他') ||
+        nextPath.includes('17. 归档')
       ) {
       } else {
         filesList.push (
