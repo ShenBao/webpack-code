@@ -4,7 +4,8 @@
   "description": "webpack 学习笔记",
   "main": "generate.README.md.js",
   "scripts": {
-    "build": "node generate.README.md.js",
+    "prebuild": "node ./scripts/generate.index.html.js",
+    "build": "node ./scripts/generate.README.md.js",
     "server": "anywhere -p 80 -d ../",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

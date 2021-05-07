@@ -189,7 +189,12 @@ webpack 学习笔记
 1. [Tapable](%2F15.%20article%2F004.%20Tapable.md)
 1. [商城应用](%2F15.%20article%2F005.%20%E5%95%86%E5%9F%8E%E5%BA%94%E7%94%A8.md)
 
-## [16. 其他](%2F16.%20%E5%85%B6%E4%BB%96%2FREADME.md)
+## [16. 其他工具](%2F16.%20%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7%2FREADME.md)
+
+1. [Rollup](%2F16.%20%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7%2F01.%20Rollup.md)
+1. [Parcel](%2F16.%20%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7%2F02.%20Parcel.md)
+1. [Snowpack](%2F16.%20%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7%2F03.%20Snowpack.md)
+1. [ESbuild](%2F16.%20%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7%2F04.%20ESbuild.md)
 
 ## [17. webpack](%2F17.%20webpack%2FREADME.md)
 
@@ -198,14 +203,26 @@ webpack 学习笔记
 1. [webpack 高级配置](%2F17.%20webpack%2F02.%20webpack%20%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE.md)
 1. [webpack 优化构建速度](%2F17.%20webpack%2F03.%20webpack%20%E4%BC%98%E5%8C%96%E6%9E%84%E5%BB%BA%E9%80%9F%E5%BA%A6.md)
 1. [webpack 优化产出代码](%2F17.%20webpack%2F04.%20webpack%20%E4%BC%98%E5%8C%96%E4%BA%A7%E5%87%BA%E4%BB%A3%E7%A0%81.md)
-1. [babel](%2F17.%20webpack%2F05.%20babel.md)
+1. [babel polyfill 与 runtime](%2F17.%20webpack%2F05.%20babel%20polyfill%20%E4%B8%8E%20runtime.md)
 1. [webpack IV](%2F17.%20webpack%2F06.%20webpack%20IV.md)
+1. [W-01, Webpack 导学](%2F17.%20webpack%2FW-01.%20Webpack%20%E5%AF%BC%E5%AD%A6.md)
+1. [W-02, 核心概念](%2F17.%20webpack%2FW-02.%20%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5.md)
+1. [W-03, 常见配置](%2F17.%20webpack%2FW-03.%20%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE.md)
+1. [W-04, 模块化](%2F17.%20webpack%2FW-04.%20%E6%A8%A1%E5%9D%97%E5%8C%96.md)
+1. [W-05, TS & JS 处理](%2F17.%20webpack%2FW-05.%20TS%20%26%20JS%20%E5%A4%84%E7%90%86.md)
+1. [W-06, CSS 处理](%2F17.%20webpack%2FW-06.%20CSS%20%E5%A4%84%E7%90%86.md)
+1. [W-07, HTML 处理](%2F17.%20webpack%2FW-07.%20HTML%20%E5%A4%84%E7%90%86.md)
+1. [W-08, 项目规范及工具](%2F17.%20webpack%2FW-08.%20%E9%A1%B9%E7%9B%AE%E8%A7%84%E8%8C%83%E5%8F%8A%E5%B7%A5%E5%85%B7.md)
+1. [W-config, 完整配置](%2F17.%20webpack%2FW-config.%20%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE.md)
 
 ## [18. 归档](%2F18.%20%E5%BD%92%E6%A1%A3%2FREADME.md)
 
+1. [webpack,Features](%2F18.%20%E5%BD%92%E6%A1%A3%2Fwebpack.Features.md)
+1. [webpack,Link](%2F18.%20%E5%BD%92%E6%A1%A3%2Fwebpack.Link.md)
 1. [使用 webpack-chain](%2F18.%20%E5%BD%92%E6%A1%A3%2F%E4%BD%BF%E7%94%A8%20webpack-chain.md)
-1. [webpack,Features](%2Fwebpack.Features.md)
-1. [webpack,Link](%2Fwebpack.Link.md)
+
+## [scripts](%2Fscripts%2FREADME.md)
+
 
 ## More links
 

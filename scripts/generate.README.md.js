@@ -45,7 +45,7 @@ function readFileList (dir, filesList = []) {
           {},
           {
             name: item,
-            path: fullPath.replace (__dirname, '').replace (/\\/g, '/') +
+            path: fullPath.replace (process.cwd(), '').replace (/\\/g, '/') +
               '/README.md',
           }
         );
@@ -63,7 +63,7 @@ function readFileList (dir, filesList = []) {
           arr.shift ();
         }
         name = arr.join ().replace (/(^\s*)|(\s*$)/g, '');
-        var itemPath = fullPath.replace (__dirname, '').replace (/\\/g, '/');
+        var itemPath = fullPath.replace (process.cwd(), '').replace (/\\/g, '/');
         var obj = {
           name: name,
           path: itemPath,
@@ -76,7 +76,7 @@ function readFileList (dir, filesList = []) {
 }
 
 var filesList = [];
-readFileList (__dirname, filesList);
+readFileList (process.cwd(), filesList);
 
 console.log (JSON.stringify (filesList, null, 4));
 
