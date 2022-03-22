@@ -15,14 +15,14 @@ resolveLoader: {
     ]
     // 别名的方式
     // alias:{
-    //     "loader1":path.resolve(__dirname,'loader','loade1.js')
+    //     "loader1":path.resolve(__dirname,'loader','loader1.js')
     // }
 },
 ```
 
 ## loader 的分类
 
-- loader 的分类有 pre{前置} post{后置} notrmal{正常}
+- loader 的分类有 pre{前置} post{后置} normal{正常}
 - loader 的执行顺序 pre + normal + inline + post
 
 ## 加载 loader 的方式
