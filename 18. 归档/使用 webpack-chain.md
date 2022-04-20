@@ -97,6 +97,7 @@ chainWebpack: (config) => {
       },
     });
 };
+
 // chain其余队proxy的配置
 config.devServer
   .bonjour(bonjour)
@@ -201,7 +202,7 @@ chainWebpack: (config) => {
 有时候须要 xx 插件在 aa 插件以前调用。
 
 ```js
-onfig.plugin(name).before(otherName);
+config.plugin(name).before(otherName);
 
 // 一个例子：ScriptExtWebpackPlugin插件在HtmlWebpackTemplate插件前调用
 
@@ -332,12 +333,13 @@ config.module
 
 // 一个例子
 
- config.module
-      .rule('graphql')
-      .test(/\.graphql$/)
-      .use('graphql-tag/loader')
-        .loader('graphql-tag/loader')
-        .end()
+config.module
+    .rule('graphql')
+    .test(/\.graphql$/)
+    .use('graphql-tag/loader')
+      .loader('graphql-tag/loader')
+      .end()
+
 // 若是是非webpack-chain的话
 module:{
   rules:[
@@ -393,7 +395,7 @@ module.exports = {
 ## 使用 when 作条件配置
 
 ```js
-consif.when(condition, truthyFunc, falsyFunc);
+config.when(condition, truthyFunc, falsyFunc);
 
 // 一个例子，当构建生产包时添加minify插件，不然设置构建类型为source-map
 // devtool请见：https://www.webpackjs.com/configuration/devtool/

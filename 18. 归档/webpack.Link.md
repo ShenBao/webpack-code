@@ -19,7 +19,7 @@ module-federation
 
 - https://github.com/Shenfq/learn-babel
 
-## orkflow
+## workflow
 
 - https://github.com/luoxue-victor/workflow
 - https://github.com/luoxue-victor/workflow/tree/master/learn/webpack
