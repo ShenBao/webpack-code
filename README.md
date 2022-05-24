@@ -177,6 +177,16 @@ webpack 学习笔记
 1. [Module Federation](%2F13.%20webpack%205%2F03.%20Module%20Federation.md)
 1. [Module Federation 模块联邦](%2F13.%20webpack%205%2FModule%20Federation%20%E6%A8%A1%E5%9D%97%E8%81%94%E9%82%A6.md)
 
+### Webpack5
+
+1. [介绍](%2F13.%20webpack%205%2FWebpack5%2F01.%20%E4%BB%8B%E7%BB%8D.md)
+1. [走进前端构建](%2F13.%20webpack%205%2FWebpack5%2F02.%20%E8%B5%B0%E8%BF%9B%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA.md)
+1. [webpack 基础用法](%2F13.%20webpack%205%2FWebpack5%2F03.%20webpack%20%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.md)
+1. [webpack打包原理](%2F13.%20webpack%205%2FWebpack5%2F04.%20webpack%E6%89%93%E5%8C%85%E5%8E%9F%E7%90%86.md)
+1. [webpack 高阶用法](%2F13.%20webpack%205%2FWebpack5%2F05.%20webpack%20%E9%AB%98%E9%98%B6%E7%94%A8%E6%B3%95.md)
+1. [webpack构建效率和产物优化的必杀技](%2F13.%20webpack%205%2FWebpack5%2F06.%20webpack%E6%9E%84%E5%BB%BA%E6%95%88%E7%8E%87%E5%92%8C%E4%BA%A7%E7%89%A9%E4%BC%98%E5%8C%96%E7%9A%84%E5%BF%85%E6%9D%80%E6%8A%80.md)
+1. [工程化能力](%2F13.%20webpack%205%2FWebpack5%2F07.%20%E5%B7%A5%E7%A8%8B%E5%8C%96%E8%83%BD%E5%8A%9B.md)
+
 ## [14. 周边工具](%2F14.%20%E5%91%A8%E8%BE%B9%E5%B7%A5%E5%85%B7%2FREADME.md)
 
 1. [周边工具](%2F14.%20%E5%91%A8%E8%BE%B9%E5%B7%A5%E5%85%B7%2F01.%20%E5%91%A8%E8%BE%B9%E5%B7%A5%E5%85%B7.md)
@@ -188,6 +198,7 @@ webpack 学习笔记
 1. [webpack 中 imports-loader,exports-loader,expose-loader的区别](%2F15.%20article%2F003.%20webpack%20%E4%B8%AD%20imports-loader%2Cexports-loader%2Cexpose-loader%E7%9A%84%E5%8C%BA%E5%88%AB.md)
 1. [Tapable](%2F15.%20article%2F004.%20Tapable.md)
 1. [商城应用](%2F15.%20article%2F005.%20%E5%95%86%E5%9F%8E%E5%BA%94%E7%94%A8.md)
+1. [自动构建](%2F15.%20article%2F006.%20%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BA.md)
 
 ## [16. 其他工具](%2F16.%20%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7%2FREADME.md)
 
