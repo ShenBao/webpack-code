@@ -24,6 +24,7 @@ const findIsIgnoreFile = (match) => {
     filePath.endsWith('README.md') ||
     filePath.includes('node_modules') ||
     filePath.includes('oldDocs') ||
+    filePath.includes('code') ||
     filePath.includes('webpack.Link') ||
     filePath.includes('webpack.Features') ||
     filePath.includes('15. 其他') ||
