@@ -17,7 +17,7 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
     "html-inline-css-webpack-plugin": "^1.8.1",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "inline-file-loader": "^0.2.0",
     "inline-html-loader": "^0.1.0",
     "mini-css-extract-plugin": "^0.8.2",
